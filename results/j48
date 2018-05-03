@@ -1,0 +1,61 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     base2-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0-unset-class-temporarily
+Instances:    224
+Attributes:   201
+              [list of attributes omitted]
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+att132 <= 0
+|   att47 <= 0: não (75.0/23.0)
+|   att47 > 0
+|   |   att88 <= 0
+|   |   |   att6 <= 0
+|   |   |   |   att54 <= 0
+|   |   |   |   |   att21 <= 0: não (17.0/3.0)
+|   |   |   |   |   att21 > 0: sim (4.0)
+|   |   |   |   att54 > 0
+|   |   |   |   |   att9 <= 0.083333: sim (33.0/3.0)
+|   |   |   |   |   att9 > 0.083333: não (2.0)
+|   |   |   att6 > 0: sim (19.0)
+|   |   att88 > 0: sim (30.0)
+att132 > 0: não (44.0)
+
+Number of Leaves  : 	8
+
+Size of the tree : 	15
+
+
+Time taken to build model: 0.12 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         186               83.0357 %
+Incorrectly Classified Instances        38               16.9643 %
+Kappa statistic                          0.659 
+Mean absolute error                      0.2204
+Root mean squared error                  0.3543
+Relative absolute error                 44.1013 %
+Root relative squared error             70.8687 %
+Total Number of Instances              224     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.913    0.257    0.789      0.913    0.847      0.668    0.890     0.892     não
+                 0.743    0.087    0.890      0.743    0.810      0.668    0.890     0.882     sim
+Weighted Avg.    0.830    0.174    0.838      0.830    0.829      0.668    0.890     0.887     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 105  10 |   a = não
+  28  81 |   b = sim
+
