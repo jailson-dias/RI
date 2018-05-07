@@ -1,0 +1,45 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.lazy.IBk -K 1 -W 0 -A "weka.core.neighboursearch.LinearNNSearch -A \"weka.core.EuclideanDistance -R first-last\""
+Relation:     baseAcentoSelecionada
+Instances:    224
+Attributes:   201
+              [list of attributes omitted]
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+IB1 instance-based classifier
+using 1 nearest neighbour(s) for classification
+
+
+Time taken to build model: 0 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.04 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         199               88.8393 %
+Incorrectly Classified Instances        25               11.1607 %
+Kappa statistic                          0.7753
+Mean absolute error                      0.1145
+Root mean squared error                  0.2363
+Relative absolute error                 22.9188 %
+Root relative squared error             47.2676 %
+Total Number of Instances              224     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.229    0.821      1.000    0.902      0.796    0.975     0.963     não
+                 0.771    0.000    1.000      0.771    0.870      0.796    0.975     0.959     sim
+Weighted Avg.    0.888    0.118    0.908      0.888    0.887      0.796    0.975     0.961     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 115   0 |   a = não
+  25  84 |   b = sim
+

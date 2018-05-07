@@ -1,0 +1,455 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     baseAcentoSelecionada
+Instances:    224
+Attributes:   201
+              [list of attributes omitted]
+Test mode:    evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                    Class
+Variable                              não
+=========================================
+ordenar                              4.46
+menor                                1.81
+medidas                          -15.0158
+composicao                        -1.5788
+produto                           -0.1542
+tecido                            -6.2132
+tamanhos                         -15.5087
+adicionar                         33.7179
+estoque                            -1.466
+maior                              2.4611
+fabricacao                         3.5359
+lancamentos                      -11.9428
+descricao                          4.3211
+21                                14.7114
+garantia                         -16.8688
+27                                -2.3112
+31                                 2.8256
+vendidos                           4.9812
+filtrar                           10.5393
+compartilhar                      -5.9197
+decote                            -32.711
+esgotado                          -7.3632
+enviar                            17.6227
+defeito                          -15.9118
+32                                -4.8292
+selecionados                      23.3143
+29                                12.2584
+x                                  1.6591
+busto                            -12.8621
+confeccionada                     60.4848
+pontos                             9.4765
+veste                              0.7243
+14                                -3.8019
+rapida                            10.4527
+regiao                           -36.1357
+tarde                              9.5103
+refinar                           -6.8369
+chegar                           -15.8491
+foto                              -4.4716
+caracteristicas                  -42.0178
+ms                               -11.4463
+indicado                           4.6342
+slim                              23.5649
+avaliar                           29.2965
+23                                14.0309
+17                                -9.1104
+41                                 0.5296
+comparar                          -3.2772
+bag                               23.8775
+couro                              12.924
+encontrados                       -3.2772
+um                               -15.2244
+viu                               -0.5766
+navegar                          -11.5815
+47                                 1.0466
+avaliacao                          8.8839
+68                                24.4978
+comprimento                        5.7288
+filtros                           -1.4756
+pois                              11.2384
+trabalho                         -10.4545
+caramelo                         -11.7241
+limpar                           -11.7241
+vc                               -12.2511
+selecionador                     -12.2511
+gostei                              8.201
+variacoes                        -12.2511
+ganhou                            15.5155
+fabricante                         5.3605
+compradores                        5.3605
+if                                 5.3605
+avalie                             5.3605
+endif                              5.3605
+ampliar                            5.3605
+multiplus                          5.3605
+iegt                               5.3605
+economia                           5.3605
+28                               -33.4663
+bordo                             -1.9643
+75                               -14.8088
+ganhe                            -20.9101
+igual                              0.1993
+shopping                         -12.0959
+cores                            -12.2883
+sintetico                         -9.2885
+24                                 2.7208
+interessar                         4.2431
+junto                              9.2879
+contratou                          4.2431
+presta                             4.2431
+modelo                            20.8154
+19                                 8.5914
+opinioes                           4.2431
+ficou                            -13.4609
+vendas                             4.2431
+mercadolider                       4.2431
+eu                                 4.2431
+marcados                         -12.6498
+campos                           -12.6498
+adicionais                       -12.6498
+15                                  1.036
+generico                         -12.6498
+r1090                            -12.6498
+entregamos                        -2.7144
+controle                          -2.7144
+comprou                           -2.7144
+temporariamente                  -12.6498
+24h                               -2.7144
+qcct                              -2.7144
+titulo                           -12.6498
+btn                              -12.6498
+qtde                             -12.6498
+economica                         -2.7144
+lancamento                        14.2583
+tambem                            18.4556
+em                               -10.3185
+mostarda                          33.2839
+store                             -8.7119
+onca                             -20.2471
+possivel                         -32.6389
+servico                            9.4756
+vendido                          -13.9264
+segura                           -21.2538
+oi                                -5.2882
+vcs                              -13.5302
+atingiu                          -14.6515
+vou                               10.8603
+ocorreu                          -14.6515
+pode                              -0.4757
+acabamento                        31.5569
+next                                1.814
+added                               1.814
+elastano                         -47.0294
+availability                        1.814
+opcao                              3.8459
+avaliados                           1.814
+oakley                            -7.6476
+location                            1.814
+found                               1.814
+cafe                             -13.9619
+previous                            1.814
+hours                               1.814
+coral                             39.9014
+product                             1.814
+prata                             -19.023
+hd                                14.4602
+from                                1.814
+nbspstores                          1.814
+guia                                 7.47
+manga                             -18.352
+91                                  5.395
+37                                 4.1392
+superou                           18.0545
+estilos                           -0.2257
+ou                                 6.1366
+calculador                         0.7425
+material                            8.549
+mim                                21.228
+tenho                              5.5197
+43                                 8.6748
+recomendo                         31.3429
+16                                 2.1842
+genero                            -14.404
+aos                               -0.9144
+nome                               9.7923
+25                                 11.207
+otimo                            -83.7993
+maximo                             8.2979
+basics                          -129.2412
+tabela                             7.0211
+seus                              15.0507
+33                                 6.1443
+atual                             -8.7042
+cocacola                          12.7154
+g2                                -1.4319
+bronze                            14.4555
+billabong                         -3.0235
+amanha                             3.6575
+forro                              6.6084
+curl                              -3.0235
+red                              -10.8147
+g3                                -1.4319
+caqui                             -4.2739
+6995                               0.3523
+rip                               -3.0235
+live                               0.6155
+relevantes                       -13.7111
+line                               8.6855
+triton                              11.63
+prazo                              3.0009
+anuncio                            0.4462
+quem                              14.2981
+esperando                          0.4462
+ie                                -8.3459
+pergunte                           0.4462
+ajudarao                           0.4462
+atalhos                            0.4462
+primeiro                          18.7798
+limite                             0.4462
+devolvemos                         0.4462
+Intercept                         19.4063
+
+
+Odds Ratios...
+                                    Class
+Variable                              não
+=========================================
+ordenar                           86.4865
+menor                              6.1104
+medidas                                 0
+composicao                         0.2062
+produto                            0.8571
+tecido                              0.002
+tamanhos                                0
+adicionar            4.400505004961217E14
+estoque                            0.2309
+maior                             11.7171
+fabricacao                        34.3271
+lancamentos                             0
+descricao                         75.2744
+21                           2449598.1024
+garantia                                0
+27                                 0.0991
+31                                16.8705
+vendidos                         145.6459
+filtrar                        37771.1125
+compartilhar                       0.0027
+decote                                  0
+esgotado                           0.0006
+enviar                       45025414.275
+defeito                                 0
+32                                  0.008
+selecionados        1.3343821593324476E10
+29                            210749.6488
+x                                  5.2546
+busto                                   0
+confeccionada         1.85446573701766E26
+pontos                         13049.4364
+veste                              2.0632
+14                                 0.0223
+rapida                         34636.6522
+regiao                                  0
+tarde                          13498.1843
+refinar                            0.0011
+chegar                                  0
+foto                               0.0114
+caracteristicas                         0
+ms                                      0
+indicado                         102.9467
+slim                1.7143509733629208E10
+avaliar               5.28840783514974E12
+23                           1240307.4056
+17                                 0.0001
+41                                 1.6983
+comparar                           0.0377
+bag                   2.34345634707738E10
+couro                         410048.5433
+encontrados                        0.0377
+um                                      0
+viu                                0.5618
+navegar                                 0
+47                                 2.8479
+avaliacao                        7214.853
+68                  4.3575212944150635E10
+comprimento                      307.5883
+filtros                            0.2286
+pois                           75994.0524
+trabalho                                0
+caramelo                                0
+limpar                                  0
+vc                                      0
+selecionador                            0
+gostei                          3644.5113
+variacoes                               0
+ganhou                        5473842.951
+fabricante                       212.8247
+compradores                      212.8247
+if                               212.8247
+avalie                           212.8247
+endif                            212.8247
+ampliar                          212.8247
+multiplus                        212.8248
+iegt                             212.8248
+economia                         212.8248
+28                                      0
+bordo                              0.1403
+75                                      0
+ganhe                                   0
+igual                              1.2206
+shopping                                0
+cores                                   0
+sintetico                          0.0001
+24                                15.1918
+interessar                        69.6218
+junto                          10806.2562
+contratou                         69.6218
+presta                            69.6218
+modelo                    1096509035.9148
+19                              5385.3125
+opinioes                          69.6218
+ficou                                   0
+vendas                            69.6218
+mercadolider                      69.6218
+eu                                69.6218
+marcados                                0
+campos                                  0
+adicionais                              0
+15                                 2.8179
+generico                                0
+r1090                                   0
+entregamos                         0.0662
+controle                           0.0662
+comprou                            0.0662
+temporariamente                         0
+24h                                0.0662
+qcct                               0.0662
+titulo                                  0
+btn                                     0
+qtde                                    0
+economica                          0.0662
+lancamento                   1557017.2219
+tambem                     103548486.7637
+em                                      0
+mostarda            2.8509784011106725E14
+store                              0.0002
+onca                                    0
+possivel                                0
+servico                        13038.1485
+vendido                                 0
+segura                                  0
+oi                                 0.0051
+vcs                                     0
+atingiu                                 0
+vou                            52066.2727
+ocorreu                                 0
+pode                               0.6214
+acabamento           5.069994163961829E13
+next                               6.1351
+added                              6.1351
+elastano                                0
+availability                       6.1351
+opcao                             46.8027
+avaliados                          6.1351
+oakley                             0.0005
+location                           6.1351
+found                              6.1351
+cafe                                    0
+previous                           6.1351
+hours                              6.1351
+coral              2.13285282478725952E17
+product                            6.1351
+prata                                   0
+hd                           1905478.3599
+from                               6.1351
+nbspstores                         6.1351
+guia                            1754.5599
+manga                                   0
+91                               220.3037
+37                                62.7512
+superou                      69339157.869
+estilos                             0.798
+ou                               462.4892
+calculador                         2.1011
+material                        5161.5514
+mim                       1656570339.4898
+tenho                            249.5636
+43                              5853.3327
+recomendo            4.092947799750582E13
+16                                 8.8833
+genero                                  0
+aos                                0.4008
+nome                           17895.4769
+25                             73643.0411
+otimo                                   0
+maximo                          4015.3804
+basics                                  0
+tabela                          1120.0613
+seus                         3439140.0958
+33                               466.0581
+atual                              0.0002
+cocacola                      332824.6451
+g2                                 0.2389
+bronze                       1896517.6832
+billabong                          0.0486
+amanha                            38.7657
+forro                             741.275
+curl                               0.0486
+red                                     0
+g3                                 0.2389
+caqui                              0.0139
+6995                               1.4224
+rip                                0.0486
+live                               1.8507
+relevantes                              0
+line                            5916.3561
+triton                        112416.8296
+prazo                             20.1032
+anuncio                            1.5624
+quem                          1620325.956
+esperando                          1.5624
+ie                                 0.0002
+pergunte                           1.5624
+ajudarao                           1.5624
+atalhos                            1.5624
+primeiro                   143200388.7565
+limite                             1.5624
+devolvemos                         1.5624
+
+
+Time taken to build model: 0.27 seconds
+
+=== Evaluation on training set ===
+
+Time taken to test model on training data: 0.01 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         199               88.8393 %
+Incorrectly Classified Instances        25               11.1607 %
+Kappa statistic                          0.7777
+Mean absolute error                      0.1116
+Root mean squared error                  0.2362
+Relative absolute error                 22.3373 %
+Root relative squared error             47.2625 %
+Total Number of Instances              224     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.800    0.018    0.979      0.800    0.880      0.792    0.975     0.965     não
+                 0.982    0.200    0.823      0.982    0.895      0.792    0.975     0.961     sim
+Weighted Avg.    0.888    0.107    0.903      0.888    0.888      0.792    0.975     0.963     
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  92  23 |   a = não
+   2 107 |   b = sim
+
