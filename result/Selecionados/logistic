@@ -1,0 +1,455 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     baseAcentoSelecionados
+Instances:    224
+Attributes:   201
+              [list of attributes omitted]
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                             Class
+Variable                       não
+==================================
+produto                     0.7794
+preco                       0.2388
+ordenar                     -0.307
+2                          -0.4782
+menor                        4.693
+medidas                    -6.6422
+composicao                   2.947
+x                            0.886
+g                          -5.9276
+quantidade                 -6.0246
+maior                       -1.797
+tecido                      1.2719
+9                           1.3887
+tamanhos                     0.807
+40                          0.7583
+3                           0.7693
+adicionar                   3.0868
+desconto                    9.0818
+compartilhar               11.3924
+estoque                    -1.7921
+4                           2.1608
+esgotado                   11.0444
+material                   14.2697
+fabricacao                -27.8105
+netpoints                  -2.4032
+meus                       -2.7627
+32                         -4.8427
+lancamentos                -5.4074
+descricao                   4.0829
+21                         -1.0534
+8                           0.9061
+pagamento                   3.8318
+garantia                   -7.9901
+31                         -6.0619
+27                          0.3594
+vendidos                    0.5005
+recomende                  -3.4431
+marisa                      0.0243
+melhores                   -5.9246
+filtrar                     10.373
+33                          7.3387
+15                         -2.3386
+11                         -5.0476
+titleblusa                 -0.0413
+store                      -1.0881
+decote                    -22.2967
+dias                       -9.1734
+defeito                     1.2573
+mercado                     1.7357
+enviar                      -2.121
+pago                       11.5482
+vendido                    -4.9578
+em                          0.2448
+z                             -0.3
+selecionados               14.7065
+29                          6.8211
+busto                       -5.461
+modelo                     -3.2509
+1                           -0.041
+espiar                      0.2493
+categoria                   6.0032
+pontos                      6.3521
+r                           0.0835
+confeccionada             -34.9453
+14                         13.3924
+veste                      -8.8734
+nome                        1.3888
+importado                   7.6657
+regiao                     -4.7687
+rapida                      2.1983
+aos                         2.6574
+uteis                      11.5034
+tarde                       6.1902
+refinar                    -1.1955
+este                       -5.8519
+24                         -5.2506
+chegar                     16.6573
+cores                       0.8393
+foto                        0.7176
+ok                         -4.1704
+19                         -2.1067
+caracteristicas           -14.5385
+oficiais                    -2.259
+23                         10.8602
+com                          0.963
+ms                         -1.8094
+indicado                   -8.7633
+16                         -4.8407
+slim                       -1.8871
+avaliar                   -10.7383
+um                          3.0805
+tabela                    -46.2797
+primeiro                   10.8727
+41                            4.29
+17                         -5.4519
+35                         -2.6829
+online                      2.2457
+bag                         6.4756
+couro                      -1.0766
+resultado                  -1.4405
+encontrados                 0.9015
+comparar                    0.4508
+navegar                   -12.6906
+imagem                      3.5031
+viu                        11.7553
+pois                       10.5045
+47                         -0.7491
+comprimento                 4.1743
+avaliacao                  -4.1156
+7                          -1.5146
+68                         -9.5006
+nao                          1.381
+nota                       22.5136
+49                         -0.4679
+37                          7.4886
+filtros                   -10.5315
+30                          5.0819
+caramelo                   -6.6944
+trabalho                  -20.5076
+limpar                      0.1716
+n                          -1.0945
+gostei                      -8.583
+vc                         -4.9044
+variacoes                  13.5452
+selecionador               -7.5589
+endif                      -0.3396
+fabricante                 -0.3396
+ganhou                     11.5225
+if                         -0.3396
+ou                          -1.261
+avalie                     -0.3396
+iegt                       -0.3396
+economia                   -0.3396
+multiplus                  -0.3396
+ampliar                    -0.3396
+compradores                -0.3396
+10x                         2.5636
+28                         -2.6776
+uma                        -0.0485
+bordo                      -4.8746
+tamanho                    -0.6413
+denuncia                    0.0518
+shopping                   22.4463
+75                        -19.9742
+ganhe                      -6.5479
+igual                       1.8663
+disponivel                 12.8365
+sintetico                   3.2078
+servico                     2.6873
+muito                       5.9335
+junto                     -33.2642
+btn                        -3.1144
+faca                        -0.086
+titlevestido               -8.6423
+campos                     -3.1144
+masculina                   1.7591
+generico                   -3.1144
+marcados                   -3.1144
+escreva                   -11.4141
+qtde                       -3.1144
+r1090                      -0.2595
+perguntas                  -0.5498
+mercadolider                 0.303
+bom                         0.7975
+ficou                      -1.8915
+formas                      0.4781
+vendas                       0.303
+usuario                     1.2125
+tem                         -1.209
+temos                      -4.0365
+adicionais                 -1.5572
+contratou                   0.0606
+temporariamente            -3.1144
+economica                  -8.9465
+presta                       0.303
+eu                         -0.1894
+controle                   -8.9465
+titulo                     -3.1144
+interessar                   0.303
+comprou                    -2.9822
+qcct                       -8.9465
+do                         -1.2202
+opinioes                    1.8192
+entregamos                 -8.9465
+24h                        -8.9465
+vendedor                   -1.1839
+sobre                       -4.635
+saiba                       3.7686
+possivel                    3.8331
+lancamento                 -2.7228
+onca                        -9.232
+mostarda                    8.0224
+tambem                      5.1623
+6                          -2.3376
+3739                        8.2767
+social                        1.85
+22                          -2.268
+atingiu                   -11.1942
+preto                      -0.3712
+405                         7.8654
+Intercept                  13.3663
+
+
+Odds Ratios...
+                             Class
+Variable                       não
+==================================
+produto                     2.1801
+preco                       1.2697
+ordenar                     0.7356
+2                           0.6199
+menor                     109.1827
+medidas                     0.0013
+composicao                 19.0494
+x                           2.4254
+g                           0.0027
+quantidade                  0.0024
+maior                       0.1658
+tecido                      3.5676
+9                           4.0095
+tamanhos                    2.2412
+40                          2.1346
+3                           2.1582
+adicionar                  21.9069
+desconto                 8793.7151
+compartilhar            88646.1801
+estoque                     0.1666
+4                           8.6779
+esgotado                62590.7196
+material              1574969.3477
+fabricacao                       0
+netpoints                   0.0904
+meus                        0.0631
+32                          0.0079
+lancamentos                 0.0045
+descricao                   59.319
+21                          0.3488
+8                           2.4747
+pagamento                  46.1463
+garantia                    0.0003
+31                          0.0023
+27                          1.4325
+vendidos                    1.6496
+recomende                    0.032
+marisa                      1.0246
+melhores                    0.0027
+filtrar                 31983.6705
+33                       1538.6779
+15                          0.0965
+11                          0.0064
+titleblusa                  0.9596
+store                       0.3369
+decote                           0
+dias                        0.0001
+defeito                     3.5158
+mercado                     5.6727
+enviar                      0.1199
+pago                   103586.2194
+vendido                      0.007
+em                          1.2774
+z                           0.7408
+selecionados          2437571.9106
+29                        917.0307
+busto                       0.0042
+modelo                      0.0387
+1                           0.9599
+espiar                      1.2832
+categoria                 404.7176
+pontos                    573.6853
+r                           1.0871
+confeccionada                    0
+14                     655036.0501
+veste                       0.0001
+nome                        4.0099
+importado                2133.9276
+regiao                      0.0085
+rapida                      9.0093
+aos                        14.2594
+uteis                   99051.2233
+tarde                     487.9671
+refinar                     0.3026
+este                        0.0029
+24                          0.0052
+chegar               17146442.6394
+cores                       2.3148
+foto                        2.0494
+ok                          0.0154
+19                          0.1216
+caracteristicas                  0
+oficiais                    0.1045
+23                      52062.6127
+com                         2.6196
+ms                          0.1638
+indicado                    0.0002
+16                          0.0079
+slim                        0.1515
+avaliar                          0
+um                         21.7698
+tabela                           0
+primeiro                52716.9738
+41                         72.9631
+17                          0.0043
+35                          0.0684
+online                      9.4474
+bag                       649.0773
+couro                       0.3408
+resultado                   0.2368
+encontrados                 2.4634
+comparar                    1.5695
+navegar                          0
+imagem                     33.2191
+viu                    127430.8278
+pois                    36479.5195
+47                          0.4728
+comprimento                64.9917
+avaliacao                   0.0163
+7                           0.2199
+68                          0.0001
+nao                         3.9789
+nota               5991676898.3359
+49                          0.6263
+37                       1787.5178
+filtros                          0
+30                        161.0813
+caramelo                    0.0012
+trabalho                         0
+limpar                      1.1873
+n                           0.3347
+gostei                      0.0002
+vc                          0.0074
+variacoes              763167.7198
+selecionador                0.0005
+endif                       0.7121
+fabricante                  0.7121
+ganhou                 100957.0594
+if                          0.7121
+ou                          0.2834
+avalie                      0.7121
+iegt                        0.7121
+economia                    0.7121
+multiplus                   0.7121
+ampliar                     0.7121
+compradores                 0.7121
+10x                        12.9825
+28                          0.0687
+uma                         0.9526
+bordo                       0.0076
+tamanho                     0.5266
+denuncia                    1.0531
+shopping           5601384110.1018
+75                               0
+ganhe                       0.0014
+igual                       6.4645
+disponivel              375688.767
+sintetico                  24.7239
+servico                    14.6919
+muito                     377.4609
+junto                            0
+btn                         0.0444
+faca                        0.9176
+titlevestido                0.0002
+campos                      0.0444
+masculina                   5.8074
+generico                    0.0444
+marcados                    0.0444
+escreva                          0
+qtde                        0.0444
+r1090                       0.7714
+perguntas                   0.5771
+mercadolider                1.3539
+bom                         2.2201
+ficou                       0.1508
+formas                       1.613
+vendas                      1.3539
+usuario                      3.362
+tem                         0.2985
+temos                       0.0177
+adicionais                  0.2107
+contratou                   1.0625
+temporariamente             0.0444
+economica                   0.0001
+presta                      1.3539
+eu                          0.8274
+controle                    0.0001
+titulo                      0.0444
+interessar                  1.3539
+comprou                     0.0507
+qcct                        0.0001
+do                          0.2952
+opinioes                     6.167
+entregamos                  0.0001
+24h                         0.0001
+vendedor                    0.3061
+sobre                       0.0097
+saiba                      43.3201
+possivel                   46.2042
+lancamento                  0.0657
+onca                        0.0001
+mostarda                  3048.509
+tambem                    174.5628
+6                           0.0966
+3739                     3931.2032
+social                        6.36
+22                          0.1035
+atingiu                          0
+preto                       0.6899
+405                      2605.4294
+
+
+Time taken to build model: 0.3 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          39               69.6429 %
+Incorrectly Classified Instances        17               30.3571 %
+Kappa statistic                          0.385 
+Mean absolute error                      0.2663
+Root mean squared error                  0.456 
+Relative absolute error                 53.1635 %
+Root relative squared error             90.949  %
+Total Number of Instances               56     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.519    0.138    0.778      0.519    0.622      0.407    0.801     0.778     não
+                 0.862    0.481    0.658      0.862    0.746      0.407    0.796     0.750     sim
+Weighted Avg.    0.696    0.316    0.716      0.696    0.686      0.407    0.798     0.764     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 14 13 |  a = não
+  4 25 |  b = sim
+

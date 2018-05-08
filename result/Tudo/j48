@@ -1,0 +1,62 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     baseAcentoTudo
+Instances:    224
+Attributes:   13841
+              [list of attributes omitted]
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+produto <= 1: não (126.0/26.0)
+produto > 1
+|   roupas <= 0
+|   |   decote <= 0
+|   |   |   medidas <= 0: não (9.0)
+|   |   |   medidas > 0: sim (4.0)
+|   |   decote > 0: sim (8.0)
+|   roupas > 0
+|   |   resultados <= 0: sim (50.0)
+|   |   resultados > 0
+|   |   |   feminino <= 5: não (6.0)
+|   |   |   feminino > 5: sim (21.0)
+
+Number of Leaves  : 	7
+
+Size of the tree : 	13
+
+
+Time taken to build model: 1.25 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          42               75      %
+Incorrectly Classified Instances        14               25      %
+Kappa statistic                          0.4929
+Mean absolute error                      0.2699
+Root mean squared error                  0.4116
+Relative absolute error                 53.8907 %
+Root relative squared error             82.0869 %
+Total Number of Instances               56     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.556    0.069    0.882      0.556    0.682      0.529    0.828     0.757     não
+                 0.931    0.444    0.692      0.931    0.794      0.529    0.828     0.797     sim
+Weighted Avg.    0.750    0.263    0.784      0.750    0.740      0.529    0.828     0.778     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 15 12 |  a = não
+  2 27 |  b = sim
+

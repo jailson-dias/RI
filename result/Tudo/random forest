@@ -1,0 +1,47 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.RandomForest -P 100 -I 100 -num-slots 1 -K 0 -M 1.0 -V 0.001 -S 1
+Relation:     baseAcentoTudo
+Instances:    224
+Attributes:   13841
+              [list of attributes omitted]
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+RandomForest
+
+Bagging with 100 iterations and base learner
+
+weka.classifiers.trees.RandomTree -K 0 -M 1.0 -V 0.001 -S 1 -do-not-check-capabilities
+
+Time taken to build model: 5.75 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          47               83.9286 %
+Incorrectly Classified Instances         9               16.0714 %
+Kappa statistic                          0.6761
+Mean absolute error                      0.2481
+Root mean squared error                  0.3132
+Relative absolute error                 49.5363 %
+Root relative squared error             62.4636 %
+Total Number of Instances               56     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.741    0.069    0.909      0.741    0.816      0.687    0.943     0.901     não
+                 0.931    0.259    0.794      0.931    0.857      0.687    0.943     0.949     sim
+Weighted Avg.    0.839    0.168    0.850      0.839    0.837      0.687    0.943     0.926     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 20  7 |  a = não
+  2 27 |  b = sim
+

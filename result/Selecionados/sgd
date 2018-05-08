@@ -1,0 +1,249 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.SGD -F 0 -L 0.01 -R 1.0E-4 -E 500 -C 0.001 -S 1
+Relation:     baseAcentoSelecionados
+Instances:    224
+Attributes:   201
+              [list of attributes omitted]
+Test mode:    split 75.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Loss function: Hinge loss (SVM)
+
+Squared loss (linear regression)
+
+classePagina = 
+
+         0.0833 (normalized) produto
+ +      -0.7184 (normalized) preco
+ +      -0.2599 (normalized) ordenar
+ +      -0.0024 (normalized) 2
+ +      -0.4365 (normalized) menor
+ +       1.1329 (normalized) medidas
+ +       0.7044 (normalized) composicao
+ +      -0.5822 (normalized) x
+ +       0.1066 (normalized) g
+ +       0.0425 (normalized) quantidade
+ +      -0.0549 (normalized) maior
+ +       0.4477 (normalized) tecido
+ +      -0.0332 (normalized) 9
+ +       0.1679 (normalized) tamanhos
+ +      -1.4522 (normalized) 40
+ +      -0.2512 (normalized) 3
+ +      -1.5061 (normalized) adicionar
+ +      -0.6097 (normalized) desconto
+ +      -0.1067 (normalized) compartilhar
+ +      -0.0464 (normalized) estoque
+ +      -0.154  (normalized) 4
+ +      -0.4931 (normalized) esgotado
+ +      -1.6162 (normalized) material
+ +       0.07   (normalized) fabricacao
+ +      -0.058  (normalized) netpoints
+ +       0.065  (normalized) meus
+ +      -0.0492 (normalized) 32
+ +      -0.1124 (normalized) lancamentos
+ +       0.1833 (normalized) descricao
+ +      -0.0427 (normalized) 21
+ +      -0.0752 (normalized) 8
+ +      -0.6887 (normalized) pagamento
+ +       0.1366 (normalized) garantia
+ +      -0.0375 (normalized) 31
+ +      -0.0338 (normalized) 27
+ +      -0.1616 (normalized) vendidos
+ +       0.03   (normalized) recomende
+ +      -0.0709 (normalized) marisa
+ +      -0.03   (normalized) melhores
+ +      -0.08   (normalized) filtrar
+ +      -0.3406 (normalized) 33
+ +      -0.476  (normalized) 15
+ +      -0.0319 (normalized) 11
+ +       1.3394 (normalized) titleblusa
+ +      -0.0154 (normalized) store
+ +       3.684  (normalized) decote
+ +       1.1009 (normalized) dias
+ +       0.2299 (normalized) defeito
+ +      -0.2981 (normalized) mercado
+ +       0.0533 (normalized) enviar
+ +      -0.082  (normalized) pago
+ +       0.3715 (normalized) vendido
+ +       0.1562 (normalized) em
+ +      -0.0033 (normalized) z
+ +      -1.2795 (normalized) selecionados
+ +      -0.0407 (normalized) 29
+ +       1.4872 (normalized) busto
+ +       1.6695 (normalized) modelo
+ +      -0.0254 (normalized) 1
+ +       0.2051 (normalized) espiar
+ +      -0.4132 (normalized) categoria
+ +       0.03   (normalized) pontos
+ +      -0.0417 (normalized) r
+ +       2.1592 (normalized) confeccionada
+ +       0.0795 (normalized) 14
+ +       1.1315 (normalized) veste
+ +       0.0567 (normalized) nome
+ +      -0.1349 (normalized) importado
+ +       0.1899 (normalized) regiao
+ +       0.2199 (normalized) rapida
+ +       0.2    (normalized) aos
+ +       0.1249 (normalized) uteis
+ +      -0.0186 (normalized) tarde
+ +      -0.1    (normalized) refinar
+ +       0.177  (normalized) este
+ +      -0.0395 (normalized) 24
+ +       0.105  (normalized) chegar
+ +       0.0961 (normalized) cores
+ +       0.1211 (normalized) foto
+ +       0.2238 (normalized) ok
+ +       0.213  (normalized) 19
+ +       1.4963 (normalized) caracteristicas
+ +      -0.2049 (normalized) oficiais
+ +      -0.0418 (normalized) 23
+ +      -0.3941 (normalized) com
+ +      -0.06   (normalized) ms
+ +       0.1499 (normalized) indicado
+ +      -0.067  (normalized) 16
+ +      -0.1493 (normalized) slim
+ +       0.2499 (normalized) avaliar
+ +      -0.1577 (normalized) um
+ +       2.8721 (normalized) tabela
+ +       0.07   (normalized) primeiro
+ +      -0.0553 (normalized) 41
+ +      -0.2023 (normalized) 17
+ +      -0.6026 (normalized) 35
+ +       0.055  (normalized) online
+ +      -0.07   (normalized) bag
+ +      -0.3404 (normalized) couro
+ +       0.1259 (normalized) resultado
+ +      -0.06   (normalized) encontrados
+ +      -0.06   (normalized) comparar
+ +      -0.3699 (normalized) navegar
+ +      -0.3324 (normalized) imagem
+ +      -0.7146 (normalized) viu
+ +      -0.1799 (normalized) pois
+ +      -0.0457 (normalized) 47
+ +      -0.1015 (normalized) comprimento
+ +       0.713  (normalized) avaliacao
+ +      -0.0247 (normalized) 7
+ +      -0.0343 (normalized) 68
+ +      -0.0964 (normalized) nao
+ +      -0.2433 (normalized) nota
+ +       0.0817 (normalized) 49
+ +      -0.777  (normalized) 37
+ +      -0.2599 (normalized) filtros
+ +      -1.2582 (normalized) 30
+ +      -0.0475 (normalized) caramelo
+ +      -0.0866 (normalized) trabalho
+ +      -0.024  (normalized) limpar
+ +      -0.0344 (normalized) n
+ +       0.5648 (normalized) gostei
+ +       0.0857 (normalized) vc
+ +       0.06   (normalized) variacoes
+ +       0.2399 (normalized) selecionador
+ +       0.1399 (normalized) endif
+ +       0.1399 (normalized) fabricante
+ +       0.2899 (normalized) ganhou
+ +       0.1399 (normalized) if
+ +       0.3354 (normalized) ou
+ +       0.1399 (normalized) avalie
+ +       0.1399 (normalized) iegt
+ +       0.1399 (normalized) economia
+ +       0.1399 (normalized) multiplus
+ +       0.1399 (normalized) ampliar
+ +       0.1399 (normalized) compradores
+ +      -0.7705 (normalized) 10x
+ +      -0.025  (normalized) 28
+ +       0.2226 (normalized) uma
+ +      -0.0966 (normalized) bordo
+ +       0.577  (normalized) tamanho
+ +       0.0736 (normalized) denuncia
+ +      -0.05   (normalized) shopping
+ +      -0.046  (normalized) 75
+ +       1.0695 (normalized) ganhe
+ +       0.5273 (normalized) igual
+ +      -1.6466 (normalized) disponivel
+ +      -0.4111 (normalized) sintetico
+ +       0.0428 (normalized) servico
+ +       0.4438 (normalized) muito
+ +       0.055  (normalized) junto
+ +       0.07   (normalized) btn
+ +       0.1126 (normalized) faca
+ +       1.0095 (normalized) titlevestido
+ +       0.07   (normalized) campos
+ +      -1.5119 (normalized) masculina
+ +       0.07   (normalized) generico
+ +       0.07   (normalized) marcados
+ +       0.6498 (normalized) escreva
+ +       0.07   (normalized) qtde
+ +       0.07   (normalized) r1090
+ +       0.3549 (normalized) perguntas
+ +       0.11   (normalized) mercadolider
+ +       0.1856 (normalized) bom
+ +       0.077  (normalized) ficou
+ +      -0.2019 (normalized) formas
+ +       0.11   (normalized) vendas
+ +       0.052  (normalized) usuario
+ +       0.069  (normalized) tem
+ +       0.0791 (normalized) temos
+ +       0.07   (normalized) adicionais
+ +       0.11   (normalized) contratou
+ +       0.07   (normalized) temporariamente
+ +       0.2799 (normalized) economica
+ +       0.11   (normalized) presta
+ +       0.0608 (normalized) eu
+ +       0.2799 (normalized) controle
+ +       0.07   (normalized) titulo
+ +       0.11   (normalized) interessar
+ +       0.2799 (normalized) comprou
+ +       0.2799 (normalized) qcct
+ +      -0.0148 (normalized) do
+ +       0.088  (normalized) opinioes
+ +       0.2799 (normalized) entregamos
+ +       0.2799 (normalized) 24h
+ +       0.04   (normalized) vendedor
+ +       0.5198 (normalized) sobre
+ +      -0.0367 (normalized) saiba
+ +       0.1799 (normalized) possivel
+ +      -0.0466 (normalized) lancamento
+ +      -0.035  (normalized) onca
+ +      -0.3049 (normalized) mostarda
+ +      -0.3874 (normalized) tambem
+ +       0.1987 (normalized) 6
+ +       0.125  (normalized) 3739
+ +       0.0153 (normalized) social
+ +      -0.3069 (normalized) 22
+ +       0.12   (normalized) atingiu
+ +       0.7845 (normalized) preto
+ +       0.1275 (normalized) 405
+ -       0.96  
+
+Time taken to build model: 0.08 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          45               80.3571 %
+Incorrectly Classified Instances        11               19.6429 %
+Kappa statistic                          0.6041
+Mean absolute error                      0.1964
+Root mean squared error                  0.4432
+Relative absolute error                 39.2198 %
+Root relative squared error             88.3944 %
+Total Number of Instances               56     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.704    0.103    0.864      0.704    0.776      0.614    0.800     0.751     não
+                 0.897    0.296    0.765      0.897    0.825      0.614    0.800     0.739     sim
+Weighted Avg.    0.804    0.203    0.812      0.804    0.801      0.614    0.800     0.745     
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 19  8 |  a = não
+  3 26 |  b = sim
+
