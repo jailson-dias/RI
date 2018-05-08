@@ -1,0 +1,2526 @@
+<!doctype html>
+<html lang="pt">
+ <head> 
+  <!-- Google Tag Manager --> 
+  <script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PHC34QS');</script> 
+  <!-- End Google Tag Manager --> 
+  <title>
+		Kit Dia das Mães - Sutiã + Calcinha |  Promoção de kit dia das mães - sutiã + calcinha na Marisa</title> 
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"> 
+  <meta name="keywords"> 
+  <meta name="description"> 
+  <meta name="title" content="Kit Dia das Mães - Sutiã + Calcinha |  Promoção de kit dia das mães - sutiã + calcinha na Marisa"> 
+  <meta name="og:title" content="Kit Dia das Mães - Sutiã + Calcinha |  Promoção de kit dia das mães - sutiã + calcinha na Marisa"> 
+  <meta name="og:description"> 
+  <meta name="robots" content="index,follow"> 
+  <link rel="shortcut icon" type="image/x-icon" media="all" href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/img/favicon.ico"> 
+  <link rel="canonical" href="https://www.marisa.com.br/dia-maes/promocao/c/diamaes-sutiacalcinha"> 
+  <link href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/fonts/Roboto/Roboto.css" rel="stylesheet"> 
+  <link href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/fonts/Josefin-Sans/Josefin-Sans.css" rel="stylesheet"> 
+  <link href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/fonts/Josefin-Slab/Josefin-Slab.css" rel="stylesheet"> 
+  <link href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/fonts/PlutoSans/PlutoSans.css" rel="stylesheet"> 
+  <link href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/fonts/Pluto/Pluto.css" rel="stylesheet"> 
+  <link async rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/css/third-party.93967884.css"> 
+  <link async rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/css/custom.925cce2d.css"> 
+  <link async rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/css/pages/page--product.799b1c99.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/addons/paypaladdon/responsive/common/css/paypaladdon.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/addons/liveeditaddon/responsive/common/css/liveeditaddon.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/addons/assistedservicestorefront/responsive/common/css/assistedservicestorefront.css"> 
+  <link rel="stylesheet" type="text/css" media="all" href="https://scripts2.marisa.com.br/_ui/addons/storefeedaddon/responsive/common/css/storefeedaddon.css"> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/shared/js/analyticsmediator.js"></script> 
+  <!--Maxymiser script start --> 
+  <script type="text/javascript" src="//service.maxymiser.net/cdn/pakua/marisa/js/mmcore.js"></script> 
+  <!--Maxymiser script end--> 
+ </head> 
+ <body class="page-productGrid pageType-CategoryPage template-pages-category-productGridPage  language-pt" data-page-uid="productGrid"> 
+  <!-- Google Tag Manager (noscript) --> 
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PHC34QS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> 
+  <!-- End Google Tag Manager (noscript) --> 
+  <main data-currency-iso-code="BRL"> 
+   <a href="#skip-to-content" class="skiptocontent" data-role="none">Skip to content</a> 
+   <a href="#skiptonavigation" class="skiptonavigation" data-role="none">Skip to navigation</a> 
+   <header class="main-header js-mainHeader"> 
+    <div class="yCmsContentSlot"> 
+     <nav class="header-promotional-banner text-center "> 
+      <div class="container"> 
+       <span class="header-promotional-banner-description-wrapper"> <p class="header-promotional-banner-description"></p><p style="font-size: 14px;">FRETE GRÁTIS SUL SUDESTE R$249,90</p><p></p> <a href="#" data-action="open-header-promotional-banner"> <i class="ion-plus-circled visible-md-inline visible-lg-inline"></i> </a> </span> 
+       <div class="header-promotional-banner-image clearfix hidden-xs hidden-sm hidden"> 
+        <button type="button" class="close" aria-label="Close" data-action="close-header-promotional-banner"> <span aria-hidden="true" class="ion-close-round"></span> </button> 
+        <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h79/hb9/9740580126750/20171211BannerPromoRosaFreteGratis249.jpg" alt="" class="img-responsive"> 
+       </div> 
+      </div> 
+     </nav>
+     <nav class="navbar navbar-static-top navbar-inverse header-top-menubar hidden-sm hidden-xs "> 
+      <div class="container"> 
+       <div class="navbar-header text-center"> 
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#header-top-menubar" aria-expanded="false"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+        <div class="navbar-brand mobile-logo-component hidden-md hidden-lg"> 
+         <div class="yCmsComponent yComponentWrapper visible-xs-inline-block visible-sm-inline-block"> 
+          <div class="banner__component banner"> 
+           <a href="/"><img title="logo-marisa.svg" alt="logo-marisa.svg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h16/hcc/9898321838110/logo-marisa.svg"></a> 
+           <h1 class="headingTag"> www.marisa.com.br</h1> 
+          </div>
+         </div>
+        </div> 
+        <button type="button" class="navbar-toggle pull-right"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> 
+       </div> 
+       <div class="collapse navbar-collapse" id="header-top-menubar"> 
+        <ul class="nav navbar-nav navbar-right"> 
+         <li class="yCmsComponent"> <a href="/my-account/orders" title="Meus Pedidos">Meus Pedidos</a></li>
+         <li class="yCmsComponent"> <a href="/store-finder" title="Nossas Lojas">Nossas Lojas</a></li>
+         <li class="yCmsComponent"> <a href="/cartoes-marisa" title="Cartões Marisa">Cartões Marisa</a></li>
+         <li class="yCmsComponent"> <a href="/entrega" title="Prazo de Entrega">Prazo de Entrega</a></li>
+         <li class="yCmsComponent"> <a href="/lista-de-desejos" title="Lista de Desejos">Lista de Desejos</a></li>
+         <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Atendimento<i class="ion-chevron-down"></i> </a> 
+          <ul class="dropdown-menu"> 
+           <li class="yCmsComponent"> <a href="/como-comprar-marisa" title="Como comprar">Como comprar</a></li>
+           <li class="yCmsComponent"> <a href="/faq" title="Fale conosco">Fale conosco</a></li>
+          </ul> </li> 
+        </ul> 
+       </div> 
+      </div> 
+     </nav> 
+    </div>
+    <section class="header-middle-menubar container"> 
+     <nav class="navigation navigation--top"> 
+      <div class="row"> 
+       <div class="col-xs-2 hidden-md hidden-lg "> 
+        <a href="#" data-toggle="open-header-menu"> <i class="ion-navicon-round"></i> </a> 
+       </div> 
+       <div class="col-xs-8 col-md-3 main-logo-component"> 
+        <div class="yCmsComponent yComponentWrapper"> 
+         <div class="banner__component banner"> 
+          <a href="/"><img title="logo-marisa.svg" alt="logo-marisa.svg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h16/hcc/9898321838110/logo-marisa.svg"></a> 
+          <h1 class="headingTag"> www.marisa.com.br</h1> 
+         </div>
+        </div>
+       </div> 
+       <div class="col-md-4 hidden-sm hidden-xs"> 
+        <div class="yCmsComponent header-search-component pull-right"> 
+         <div class="ui-front"> 
+          <form name="search_form_SearchBox" method="get" action="/search/"> 
+           <div class="input-group"> 
+            <input type="hidden" value="" id="marisaUserId"> 
+            <input type="text" id="js-site-search-input" class="form-control js-site-search-input" name="text" value="" maxlength="255" placeholder="O que você procura?" data-options="{&quot;autocompleteUrl&quot; : &quot;/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : true}"> 
+            <span class="input-group-btn"> <button class="btn btn-primary" type="submit"> <span class="glyphicon glyphicon-search"></span> </button> </span> 
+           </div> 
+          </form> 
+         </div> 
+        </div>
+       </div> 
+       <div class="col-md-3 hidden-sm hidden-xs"> 
+        <section class="my-account-dropdown-menu "> 
+         <div class="dropdown"> 
+          <a href="/login" class="btn btn-link"> 
+           <div class="avatar hidden-sm hidden-xs"> 
+            <img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/user-icon-comment.png" class="img-circle"> 
+            <span class="mini-badge">12</span> 
+           </div> <i class="ion-log-in hidden-md hidden-lg"></i> <span class="hidden-sm hidden-xs"> Entre ou cadastre-se</span> </a> 
+         </div> 
+        </section> 
+       </div> 
+       <div class="col-xs-2 col-md-2"> 
+        <div class="yCmsContentSlot componentContainer"> 
+         <div class="yCmsComponent"> 
+          <section class="minicart-component-wrapper text-center   "> 
+           <div class="minicart-component clearfix"> 
+            <div class="shopping-bag pull-left"> 
+             <a href="/cart"> <img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/shopping-bag-icon.png"> <span class="mini-badge">0</span> </a> 
+            </div> 
+            <div class="minicart-content pull-left text-muted hidden-sm hidden-xs"> 
+             <a href="/cart"> <h5>Minhas compras</h5> <span class="minicart-total"> <span class="price">R$ 0,00</span> <span class="total-display">(Subtotal)</span> </span> </a> 
+            </div> 
+            <section class="minicart--floating-cart text-left hidden-sm hidden-xs"> 
+             <header class="floating-cart--main-header hidden"> 
+              <h5>Últimos produtos adicionados:</h5> 
+             </header> 
+             <main class="floating-cart--main-content" data-empty-message="Sua sacola está vazia."></main> 
+             <footer class="floating-cart--main-footer hidden"> 
+              <div class="floating-cart--promotions"> 
+               <p class="text-center"></p> 
+              </div> 
+              <div class="floating-cart--totals row"> 
+               <div class="col-md-5" data-match-height="floating-cart--totals"> 
+                <div class="floating-cart--cart-quantity"> 
+                 <span>0 item</span> na sacola:
+                </div> 
+                <div class="floating-cart--subtotal">
+                  Subtotal: 
+                </div> 
+               </div> 
+               <div class="col-md-7 text-right" data-match-height="floating-cart--totals"> 
+                <div class="floating-cart--cart-total">
+                  R$ 0,00
+                </div> 
+                <div class="floating-cart--cart-installments"> 
+                 <p></p> 
+                </div> 
+               </div> 
+              </div> 
+              <div class="floating-cart--confirm"> 
+               <a class="btn btn-success btn-block btn-square" href="/cart">Ir para a sacola</a> 
+              </div> 
+             </footer> 
+            </section> 
+            <section class="floating-cart--clone-nodes hidden"> 
+             <div class="floating-cart--item row"> 
+              <div class="floating-cart--product-image col-md-2"> 
+               <img src="" class="img-responsive"> 
+              </div> 
+              <div class="col-md-10"> 
+               <h5 class="floating-cart--product-name"> <i class="floating-cart--remove-product marisa--close-icon pull-right"></i> <span></span> </h5> 
+               <div class="floating-cart-item--main clearfix"> 
+                <span class="floating-cart-item--quantity text-muted pull-left"> Quantidade: 0</span> 
+                <span class="floating-cart--product-price pull-right"> <strong></strong> </span> 
+               </div> 
+              </div> 
+             </div> 
+            </section> 
+            <section class="floating-cart--remove-form hidden"> 
+             <form id="floating-cart--remove-form" action="/cart/removeProduct/MarisaMiniCart" method="post">
+              <div> 
+               <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+              </div>
+             </form>
+            </section> 
+            <script>	
+	document.cookie = "MarisaMiniCart=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+</script> 
+           </div> 
+          </section>
+         </div>
+        </div>
+       </div> 
+      </div> 
+     </nav> 
+     <section class="search-bar hidden-lg hidden-md "> 
+      <div class="yCmsComponent header-search-component container"> 
+       <div class="ui-front"> 
+        <form name="search_form_SearchBox" method="get" action="/search/"> 
+         <div class="input-group"> 
+          <input type="hidden" value="" id="marisaUserId"> 
+          <input type="text" id="js-site-search-input" class="form-control js-site-search-input" name="text" value="" maxlength="255" placeholder="O que você procura?" data-options="{&quot;autocompleteUrl&quot; : &quot;/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : true}"> 
+          <span class="input-group-btn"> <button class="btn btn-primary" type="submit"> <span class="glyphicon glyphicon-search"></span> </button> </span> 
+         </div> 
+        </form> 
+       </div> 
+      </div>
+     </section> 
+    </section> 
+    <div class="hidden-xs hidden-sm js-secondaryNavAccount collapse" id="accNavComponentDesktopOne"> 
+     <ul class="nav__links"></ul> 
+    </div> 
+    <div class="hidden-xs hidden-sm js-secondaryNavCompany collapse" id="accNavComponentDesktopTwo"> 
+     <ul class="nav__links js-nav__links"> 
+     </ul> 
+    </div> 
+    <nav class="navigation navigation--middle js-navigation--middle hidden"> 
+     <div class="container"> 
+      <div class="row"> 
+       <div class="mobile__nav__row mobile__nav__row--table"> 
+        <div class="mobile__nav__row--table-group"> 
+         <div class="mobile__nav__row--table-row"> 
+          <div class="mobile__nav__row--table-cell visible-xs hidden-sm"> 
+           <button class="mobile__nav__row--btn btn mobile__nav__row--btn-menu js-toggle-sm-navigation" type="button"> <span class="glyphicon glyphicon-align-justify"></span> </button> 
+          </div> 
+          <div class="mobile__nav__row--table-cell visible-xs mobile__nav__row--seperator"> 
+           <button class="mobile__nav__row--btn btn mobile__nav__row--btn-search js-toggle-xs-search hidden-sm hidden-md hidden-lg" type="button"> <span class="glyphicon glyphicon-search"></span> </button> 
+          </div> 
+          <div class="mobile__nav__row--table-cell hidden-sm hidden-md hidden-lg mobile__nav__row--seperator"> 
+           <a href="/store-finder" class="mobile__nav__row--btn mobile__nav__row--btn-location btn"> <span class="glyphicon glyphicon-map-marker"></span> </a> 
+          </div> 
+          <div class="yCmsContentSlot miniCartSlot componentContainer mobile__nav__row--table hidden-sm hidden-md hidden-lg"> 
+           <div class="yCmsComponent mobile__nav__row--table-cell"> 
+            <section class="minicart-component-wrapper text-center   "> 
+             <div class="minicart-component clearfix"> 
+              <div class="shopping-bag pull-left"> 
+               <a href="/cart"> <img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/shopping-bag-icon.png"> <span class="mini-badge">0</span> </a> 
+              </div> 
+              <div class="minicart-content pull-left text-muted hidden-sm hidden-xs"> 
+               <a href="/cart"> <h5>Minhas compras</h5> <span class="minicart-total"> <span class="price">R$ 0,00</span> <span class="total-display">(Subtotal)</span> </span> </a> 
+              </div> 
+              <section class="minicart--floating-cart text-left hidden-sm hidden-xs"> 
+               <header class="floating-cart--main-header hidden"> 
+                <h5>Últimos produtos adicionados:</h5> 
+               </header> 
+               <main class="floating-cart--main-content" data-empty-message="Sua sacola está vazia."></main> 
+               <footer class="floating-cart--main-footer hidden"> 
+                <div class="floating-cart--promotions"> 
+                 <p class="text-center"></p> 
+                </div> 
+                <div class="floating-cart--totals row"> 
+                 <div class="col-md-5" data-match-height="floating-cart--totals"> 
+                  <div class="floating-cart--cart-quantity"> 
+                   <span>0 item</span> na sacola:
+                  </div> 
+                  <div class="floating-cart--subtotal">
+                    Subtotal: 
+                  </div> 
+                 </div> 
+                 <div class="col-md-7 text-right" data-match-height="floating-cart--totals"> 
+                  <div class="floating-cart--cart-total">
+                    R$ 0,00
+                  </div> 
+                  <div class="floating-cart--cart-installments"> 
+                   <p></p> 
+                  </div> 
+                 </div> 
+                </div> 
+                <div class="floating-cart--confirm"> 
+                 <a class="btn btn-success btn-block btn-square" href="/cart">Ir para a sacola</a> 
+                </div> 
+               </footer> 
+              </section> 
+              <section class="floating-cart--clone-nodes hidden"> 
+               <div class="floating-cart--item row"> 
+                <div class="floating-cart--product-image col-md-2"> 
+                 <img src="" class="img-responsive"> 
+                </div> 
+                <div class="col-md-10"> 
+                 <h5 class="floating-cart--product-name"> <i class="floating-cart--remove-product marisa--close-icon pull-right"></i> <span></span> </h5> 
+                 <div class="floating-cart-item--main clearfix"> 
+                  <span class="floating-cart-item--quantity text-muted pull-left"> Quantidade: 0</span> 
+                  <span class="floating-cart--product-price pull-right"> <strong></strong> </span> 
+                 </div> 
+                </div> 
+               </div> 
+              </section> 
+              <section class="floating-cart--remove-form hidden"> 
+               <form id="floating-cart--remove-form" action="/cart/removeProduct/MarisaMiniCart" method="post">
+                <div> 
+                 <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+                </div>
+               </form>
+              </section> 
+              <script>	
+	document.cookie = "MarisaMiniCart=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+</script> 
+             </div> 
+            </section>
+           </div>
+          </div>
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </nav> 
+    <div id="loader" class="bgLoader hidden"> 
+     <div class="loader"></div> 
+    </div> 
+    <a id="skiptonavigation"></a> 
+    <nav class="header--menubar"> 
+     <div class="menu--container"> 
+      <ul> 
+       <li class="header--menubar--search hidden-md hidden-lg"> 
+        <div class="yCmsComponent header-search-component"> 
+         <div class="ui-front"> 
+          <form name="search_form_SearchBox" method="get" action="/search/"> 
+           <div class="input-group"> 
+            <input type="hidden" value="" id="marisaUserId"> 
+            <input type="text" id="js-site-search-input" class="form-control js-site-search-input" name="text" value="" maxlength="255" placeholder="O que você procura?" data-options="{&quot;autocompleteUrl&quot; : &quot;/search/autocomplete/SearchBox&quot;,&quot;minCharactersBeforeRequest&quot; : &quot;3&quot;,&quot;waitTimeBeforeRequest&quot; : &quot;500&quot;,&quot;displayProductImages&quot; : true}"> 
+            <span class="input-group-btn"> <button class="btn btn-primary" type="submit"> <span class="glyphicon glyphicon-search"></span> </button> </span> 
+           </div> 
+          </form> 
+         </div> 
+        </div></li> 
+       <li class="header--menubar--myaccount hidden-md hidden-lg"> 
+        <div class="my-account--login-buttons clearfix"> 
+         <div class="col-sm-6 col-xs-6"> 
+          <a href="/login" class="btn btn-default btn-block"> Fazer login</a> 
+         </div> 
+         <div class="col-sm-6 col-xs-6"> 
+          <a href="/register" class="btn btn-default btn-block"> Criar conta</a> 
+         </div> 
+        </div> </li> 
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/feminino/c/roupas" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Feminino"> Feminino<i class="ion-chevron-right pull-right"></i> </a> <a href="/feminino/c/roupas" class="hidden-sm hidden-xs " title="Feminino"> Feminino</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Roupas Femininas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Roupas Femininas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/c/blusas" title="Blusas">Blusas</a></li> 
+           <li> <a href="/roupas/feminino/blusas/c/blusa-basica" title="Blusas Básicas">Blusas Básicas</a></li> 
+           <li> <a href="/roupas/feminino/c/bermudas" title="Bermudas">Bermudas</a></li> 
+           <li> <a href="/roupas/feminino/c/calcas" title="Calças">Calças</a></li> 
+           <li> <a href="/roupas/feminino/c/camisas" title="Camisas">Camisas</a></li> 
+           <li> <a href="/roupas/feminino/c/casacos-jaquetas" title="Casacos">Casacos</a></li> 
+           <li> <a href="/roupas/feminino/c/malhas-sueteres" title="Cardigans e Suéteres">Cardigans e Suéteres</a></li> 
+           <li> <a href="/roupas/feminino/c/coletes" title="Coletes">Coletes</a></li> 
+           <li> <a href="/roupas/feminino/casacos-jaquetas/c/moletom-casacos-jaquetas" title="Moletom">Moletom</a></li> 
+           <li> <a href="/roupas/feminino/c/saias" title="Saias">Saias</a></li> 
+           <li> <a href="/roupas/feminino/c/shorts" title="Shorts">Shorts</a></li> 
+           <li> <a href="/roupas/feminino/c/jardineiras-macacoes" title="Macacão">Macacão</a></li> 
+           <li> <a href="/roupas/feminino/c/vestidos" title="Vestidos">Vestidos</a></li> 
+           <li> <a href="/feminino/c/roupas" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/feminino/c/roupas?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Setores<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Setores</a> 
+          <ul class="collapse"> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=feminino+moda+casual%3AtopDiscount#" title="Moda Casual">Moda Casual</a></li> 
+           <li> <a href="/roupas/feminino/c/moda-fitness" title="Moda Fitness">Moda Fitness</a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=feminino+moda+jovem%3AtopDiscount#" title="Moda Jovem">Moda Jovem</a></li> 
+           <li> <a href="/roupas/feminino/c/moda-praia" title="Moda Praia">Moda Praia</a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=social+feminino%3AtopDiscount# " title="Moda Social">Moda Social</a></li> 
+           <li> <a href="/c/cartao-presente" title="Cartão Presente">Cartão Presente</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Tendências<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Tendências</a> 
+          <ul class="collapse"> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/tendencia+babado" title="Babado">Babado</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/tendencia+floral" title="Floral">Floral</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/tendencia+listras" title="Listras">Listras</a></li> 
+           <li> <a href="http://pesquisa.marisa.com.br/hotsite/tendencia+vermelho" title="Vermelho">Vermelho</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/nova+colecao+brilho+metalizado" title="Metalizado">Metalizado</a></li> 
+           <li> <a href="http://pesquisa.marisa.com.br/hotsite/tendencia+tecidos+alfaiataria " title="Alfaiataria">Alfaiataria</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Promoções<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Promoções</a> 
+          <ul class="collapse"> 
+           <li> <a href="https://www.marisa.com.br/maes-presentes-especiais" title="Combo Dia das Mães">Combo Dia das Mães</a></li> 
+           <li> <a href="/promocao/c/dia-maes" title="Dia das mães">Dia das mães</a></li> 
+           <li> <a href="/promocao/c/desconto-blusasbasicas" title="Blusas Básicas - 4 peças por 60,00">Blusas Básicas - 4 peças por 60,00</a></li> 
+           <li> <a href="/promocao/c/promocao-pijamas" title="Pijamas - 50% OFF na segunda peça">Pijamas - 50% OFF na segunda peça</a></li> 
+           <li> <a href="/promocao/c/promocao-sutias" title="Sutiãs 20% OFF">Sutiãs 20% OFF</a></li> 
+           <li> <a href="/acessorios/feminino/c/bijuterias" title="Bijuterias Leve 4 Pague 3">Bijuterias Leve 4 Pague 3</a></li> 
+           <li> <a href="https://www.marisa.com.br/todos-os-sonhos" title="Promoção Todos os Sonhos Marisa">Promoção Todos os Sonhos Marisa</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/maes-presentes-especiais"> <img title="" alt="BMenu_20180420PresentesEspeciais.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/hb4/h68/10145431519262/BMenu-20180420PresentesEspeciais.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/feminino/c/calcados" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Calçados"> Calçados<i class="ion-chevron-right pull-right"></i> </a> <a href="/feminino/c/calcados" class="hidden-sm hidden-xs " title="Calçados"> Calçados</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Feminino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Feminino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/calcados/feminino/c/botas" title="Bota">Bota</a></li> 
+           <li> <a href="/calcados/feminino/c/chinelos" title="Chinelo">Chinelo</a></li> 
+           <li> <a href="/calcados/feminino/c/mocassim" title="Mocassim">Mocassim</a></li> 
+           <li> <a href="/calcados/feminino/c/oxford" title="Oxford">Oxford</a></li> 
+           <li> <a href="/calcados/feminino/c/peep-toe" title="Peep Toe">Peep Toe</a></li> 
+           <li> <a href="/calcados/feminino/c/rasteirinhas" title="Rasteirinha">Rasteirinha</a></li> 
+           <li> <a href="/calcados/feminino/c/sandalias" title="Sandália">Sandália</a></li> 
+           <li> <a href="/calcados/feminino/c/sapatilhas" title="Sapatilha">Sapatilha</a></li> 
+           <li> <a href="/calcados/feminino/c/scarpin" title="Scarpin">Scarpin</a></li> 
+           <li> <a href="/calcados/feminino/c/tamancos" title="Tamanco">Tamanco</a></li> 
+           <li> <a href="/calcados/feminino/c/tenis" title="Tênis">Tênis</a></li> 
+           <li> </li> 
+           <li> <a href="/feminino/c/calcados" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/feminino/c/calcados?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Masculino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Masculino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/calcados-m/masculino/c/botas-m" title="Bota">Bota</a></li> 
+           <li> <a href="/calcados-m/masculino/c/chinelos-m" title="Chinelo">Chinelo</a></li> 
+           <li> <a href="/calcados-m/masculino/c/sandalias-m" title="Sandália">Sandália</a></li> 
+           <li> <a href="/calcados-m/masculino/c/sapatenis-m" title="Sapatênis">Sapatênis</a></li> 
+           <li> <a href="/calcados-m/masculino/c/tenis-m" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Menina<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Menina</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/botas-infantil-meninas" title="Bota">Bota</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/chinelos-infantil-meninas" title="Chinelo">Chinelo</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sandalias-infantil-meninas" title="Sandália">Sandália</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sapatilhas-infantil-meninas" title="Sapatilha">Sapatilha</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sapatos-infantil-meninas" title="Sapato">Sapato</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/tenis-infantil-meninas" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Menino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Menino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/botas-infantil-meninos" title="Bota">Bota</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/chinelos-infantil-meninos" title="Chinelo">Chinelo</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/papetes-infantil-meninos" title="Papete">Papete</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/sandalias-infantil-meninos" title="Sandália">Sandália</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/sapatenis-infantil-meninos" title="Sapatênis">Sapatênis</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/tenis-infantil-meninos" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Marcas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Marcas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/marcas/c/azaleia" title="Azaléia">Azaléia</a></li> 
+           <li> <a href="/marcas/c/bebece" title="Bebecê">Bebecê</a></li> 
+           <li> <a href="/marcas/c/beira-rio" title="Beira Rio">Beira Rio</a></li> 
+           <li> <a href="/marcas/c/bottero" title="Bottero">Bottero</a></li> 
+           <li> <a href="/marcas/c/comfortflex" title="Comfortflex">Comfortflex</a></li> 
+           <li> <a href="/marcas/c/dakota" title="Dakota">Dakota</a></li> 
+           <li> <a href="/marcas/c/moleca" title="Moleca">Moleca</a></li> 
+           <li> <a href="/marcas/c/piccadilly" title="Piccadilly">Piccadilly</a></li> 
+           <li> <a href="/marcas/c/ramarim" title="Ramarim">Ramarim</a></li> 
+           <li> <a href="/marcas/c/via-marte" title="Via Marte">Via Marte</a></li> 
+           <li> <a href="/marcas/c/vizzano" title="Vizzano">Vizzano</a></li> 
+           <li> <a href="/marcas/c/havaianas" title="Havaianas">Havaianas</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/dia-maes/promocao/c/diamaes-scarpin"> <img title="" alt="BMenu_20180419_Scarpin.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h07/h02/10126461468702/BMenu-20180419-Scarpin.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/feminino/c/lingerie?sort=newOnStore&amp;q=%3AtopDiscount#" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Lingerie"> Lingerie<i class="ion-chevron-right pull-right"></i> </a> <a href="/feminino/c/lingerie?sort=newOnStore&amp;q=%3AtopDiscount#" class="hidden-sm hidden-xs " title="Lingerie"> Lingerie</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Categoria<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Categoria</a> 
+          <ul class="collapse"> 
+           <li> <a href="/lingerie/feminino/c/calcinhas" title="Calcinhas">Calcinhas</a></li> 
+           <li> <a href="/lingerie/feminino/c/sutias" title="Sutiãs">Sutiãs</a></li> 
+           <li> <a href="/lingerie/feminino/c/body-sensual" title="Body Sensual">Body Sensual</a></li> 
+           <li> <a href="/lingerie/feminino/c/camisete" title="Camisete">Camisete</a></li> 
+           <li> <a href="/lingerie/feminino/c/baby-doll" title="Shorts Doll">Shorts Doll</a></li> 
+           <li> <a href="/lingerie/feminino/meias/c/meia-calca-meias" title="Meia Calça">Meia Calça</a></li> 
+           <li> <a href="/lingerie/feminino/c/meias" title="Meias">Meias</a></li> 
+           <li> <a href="/feminino/c/lingerie" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/feminino/c/lingerie?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Linha Noite<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Linha Noite</a> 
+          <ul class="collapse"> 
+           <li> <a href="/lingerie/feminino/c/camisolas" title="Camisolas">Camisolas</a></li> 
+           <li> <a href="/lingerie/feminino/c/pantufas" title="Pantufas">Pantufas</a></li> 
+           <li> <a href="/lingerie/feminino/c/roupao-robe" title="Robe">Robe</a></li> 
+           <li> <a href="/lingerie/feminino/c/pijamas" title="Pijamas">Pijamas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Setores<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Setores</a> 
+          <ul class="collapse"> 
+           <li> </li> 
+           <li> </li> 
+           <li> <a href="/lingerie/feminino/c/maternidade" title="Maternidade">Maternidade</a></li> 
+           <li> <a href="/plus-size/feminino/c/lingerie-plus-size" title="Plus Size">Plus Size</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=lingerie+de+renda" title="Renda">Renda</a></li> 
+           <li> <a href="/lingerie/feminino/c/cintas-modeladores" title="Cintas e Modeladores">Cintas e Modeladores</a></li> 
+           <li> <a href="http://pesquisa.marisa.com.br/busca?q=kit+de+lingerie&amp;p=kit%20lingerie&amp;ranking=3&amp;typeclick=1&amp;ac_pos=header" title="Kit Lingerie">Kit Lingerie</a></li> 
+           <li> <a href="/lingerie/feminino/c/lingerie-personagens" title="Personagens">Personagens</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Marcas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Marcas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/feminino/c/lingerie?q=%3AnewOnStore%3Abrand%3Amarisa&amp;text=#" title="Marisa">Marisa</a></li> 
+           <li> <a href="/marcas/c/duloren" title="Duloren">Duloren</a></li> 
+           <li> <a href="/marcas/c/delrio" title="Del Rio">Del Rio</a></li> 
+           <li> <a href="/c/esbelt" title="Esbelt">Esbelt</a></li> 
+           <li> <a href="/marcas/c/dilady" title="Dilady">Dilady</a></li> 
+           <li> <a href="/marcas/c/triumph" title="Triumph">Triumph</a></li> 
+           <li> <a href="/marcas/c/demillus" title="DeMillus">DeMillus</a></li> 
+           <li> <a href="/marcas/c/trifil" title="Trifil">Trifil</a></li> 
+           <li> <a href="/marcas/c/loba" title="Loba">Loba</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/promocao/c/promocao-pijamas"> <img title="" alt="BMenu_20180504_Pijamas.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h50/haa/10166253879326/BMenu-20180504-Pijamas.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/roupas/feminino/calcas/c/jeans-calcas" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Jeans"> Jeans<i class="ion-chevron-right pull-right"></i> </a> <a href="/roupas/feminino/calcas/c/jeans-calcas" class="hidden-sm hidden-xs " title="Jeans"> Jeans</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calças<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calças</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/calcas/jeans-calcas/c/skinny-jeans-calcas" title="Skinny">Skinny</a></li> 
+           <li> <a href="/c/flare-jeans-calcas" title="Flare">Flare</a></li> 
+           <li> <a href="/roupas/feminino/calcas/jeans-calcas/c/cigarrete-jeans-calcas" title="Cigarrete">Cigarrete</a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=destroyed%3AtopDiscount#" title="Destroyed">Destroyed</a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=capri%3AtopDiscount#" title="Capri">Capri</a></li> 
+           <li> <a href="/roupas/feminino/calcas/jeans-calcas/c/boyfriend-jeans-calcas" title="Boyfriend">Boyfriend</a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=Jegging%3AtopDiscount#" title="Jegging">Jegging</a></li> 
+           <li> <a href="/roupas/feminino/calcas/c/sarja-calcas" title="Sarja">Sarja</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=calca+jeans+plus+size" title="Plus Size">Plus Size</a></li> 
+           <li> <a href="/roupas-m/masculino/c/calcas-m" title="Masculino">Masculino</a></li> 
+           <li> </li> 
+           <li> </li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=jeans+infantil%3AtopDiscount&amp;show=Page#" title="Infantil">Infantil</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Shorts e Saias<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Shorts e Saias</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/shorts/c/jeans-shorts?sort=newOnStore&amp;q=%3AtopDiscount#" title="Shorts">Shorts</a></li> 
+           <li> <a href="/roupas/feminino/bermudas/c/jeans-bermudas" title="Bermudas">Bermudas</a></li> 
+           <li> <a href="/roupas/feminino/saias/c/saias-jeans" title="Saias">Saias</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/shorts-bermudas-plus-size" title="Plus Size">Plus Size</a></li> 
+           <li> </li> 
+           <li> </li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Camisas e Jaquetas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Camisas e Jaquetas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/camisas/c/jeans-camisas" title="Camisas ">Camisas </a></li> 
+           <li> <a href="/search/?sort=newOnStore&amp;q=jaqueta+feminina+jeans%3AtopSold#" title="Jaquetas">Jaquetas</a></li> 
+           <li> <a href="/search/?text=colete+jeans " title="Coletes">Coletes</a></li> 
+           <li> <a href="/search/?text=jaqueta+jeans+infantil " title="Infantil">Infantil</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Vestidos<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Vestidos</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/c/vestidos?q=vestido+jeans" title="Feminino">Feminino</a></li> 
+           <li> <a href="/search/?text=vestido+jeans+infantil " title="Infantil">Infantil</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calçados<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calçados</a> 
+          <ul class="collapse"> 
+           <li> <a href="/search/?text=sapatilha+jeans+feminina" title="Sapatilha">Sapatilha</a></li> 
+           <li> <a href="/search/?text=sandália+jeans+feminina" title="Sandálias">Sandálias</a></li> 
+           <li> <a href="/search/?text=tênis+jeans+feminino" title="Tênis">Tênis</a></li> 
+           <li> <a href="/search/?text=tamanco+jeans+feminino" title="Tamanco">Tamanco</a></li> 
+           <li> <a href="/search/?text=rasteirinha+jeans" title="Rasteirinhas">Rasteirinhas</a></li> 
+           <li> </li> 
+           <li> <a href="/search/?text=tênis+jeans+masculino" title="Masculino">Masculino</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/roupas/feminino/calcas/c/jeans-calcas"> <img title="" alt="BMenu_20181104_Calca.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h9f/h66/9918227218462/BMenu-20181104-Calca.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/feminino/c/plus-size" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Plus Size"> Plus Size<i class="ion-chevron-right pull-right"></i> </a> <a href="/feminino/c/plus-size" class="hidden-sm hidden-xs " title="Plus Size"> Plus Size</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Roupas Plus Size<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Roupas Plus Size</a> 
+          <ul class="collapse"> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/blusas-plus-size" title="Blusas">Blusas</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/calcas-plus-size" title="Calças">Calças</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/camisas-plus-size" title="Camisas">Camisas</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/casacos-jaquetas-plus-size" title="Casacos">Casacos</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/cardigans-sueteres-plus-size" title="Cardigans">Cardigans</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/vestidos-plus-size" title="Vestidos">Vestidos</a></li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/saias-plus-size" title="Saias">Saias</a></li> 
+           <li> </li> 
+           <li> <a href="/plus-size/feminino/roupas-plus-size/c/shorts-bermudas-plus-size" title="Bermudas">Bermudas</a></li> 
+           <li> <a href="/plus-size/feminino/c/moda-praia-plus-size" title="Biquinis e Maiôs">Biquinis e Maiôs</a></li> 
+           <li> </li> 
+           <li> <a href="/feminino/c/plus-size" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/feminino/c/plus-size?sort=topDiscount&amp;q=%3AnewOnStore&amp;show=Page#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Lingerie<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Lingerie</a> 
+          <ul class="collapse"> 
+           <li> <a href="/plus-size/feminino/lingerie-plus-size/c/camisolas-plus-size" title="Camisolas">Camisolas</a></li> 
+           <li> <a href="/plus-size/feminino/lingerie-plus-size/c/calcinhas-plus-size" title="Calcinhas">Calcinhas</a></li> 
+           <li> <a href="/plus-size/feminino/lingerie-plus-size/c/sutias-plus-size" title="Sutiãs">Sutiãs</a></li> 
+           <li> </li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Setores<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Setores</a> 
+          <ul class="collapse"> 
+           <li> <a href="/search/?text=jeans+plus+size" title="Jeans">Jeans</a></li> 
+           <li> <a href="/plus-size/feminino/c/moda-fitness-plus-size" title="Moda Fitness">Moda Fitness</a></li> 
+           <li> <a href="/plus-size/feminino/c/moda-praia-plus-size" title="Moda Praia">Moda Praia</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Tendências<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Tendências</a> 
+          <ul class="collapse"> 
+           <li> <a href="/search/?text=listrada+plus+size" title="Listras">Listras</a></li> 
+           <li> <a href="/plus-size/feminino/lingerie-plus-size/sutias-plus-size/c/strappy-sutias-plus" title="Strappy">Strappy</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=renda+plus+size&amp;p=renda%20plus&amp;ranking=2&amp;typeclick=1&amp;ac_pos=header" title="Renda">Renda</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://pesquisa.marisa.com.br/hotsite/roupas+plus+size+outono+inverno"> <img title="" alt="BMenu_20181104_Inverno.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h42/h0a/9918228922398/BMenu-20181104-Inverno.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/feminino/c/acessorios" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Acessórios"> Acessórios<i class="ion-chevron-right pull-right"></i> </a> <a href="/feminino/c/acessorios" class="hidden-sm hidden-xs " title="Acessórios"> Acessórios</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Bolsas Femininas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Bolsas Femininas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/acessorios/feminino/bolsas/c/bolsa-mao" title="Bolsa de Mão">Bolsa de Mão</a></li> 
+           <li> <a href="/acessorios/feminino/bolsas/c/bolsa-ombro" title="Bolsa de Ombro">Bolsa de Ombro</a></li> 
+           <li> </li> 
+           <li> <a href="/acessorios/feminino/bolsas/c/mochilas" title="Mochila">Mochila</a></li> 
+           <li> <a href="/acessorios/feminino/bolsas/c/bolsa-praia" title="Bolsa de Praia">Bolsa de Praia</a></li> 
+           <li> <a href="/acessorios/feminino/bolsas/c/bolsa-transversal" title="Bolsa Transversal">Bolsa Transversal</a></li> 
+           <li> </li> 
+           <li> <a href="/acessorios/feminino/c/bolsas" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/acessorios/feminino/c/bolsas?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Relógios Femininos<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Relógios Femininos</a> 
+          <ul class="collapse"> 
+           <li> <a href="/acessorios/feminino/c/relogios?q=%3AnewOnStore%3Acolor%3Acinza&amp;text=# " title="Prateado">Prateado</a></li> 
+           <li> <a href="/acessorios/feminino/c/relogios?q=%3AnewOnStore%3Acolor%3Adourado&amp;text=# " title="Dourado">Dourado</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=kit+relogio+feminino" title="Kit Relógios">Kit Relógios</a></li> 
+           <li> <a href="/acessorios/feminino/c/relogios " title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/acessorios/feminino/c/relogios?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Óculos Femininos<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Óculos Femininos</a> 
+          <ul class="collapse"> 
+           <li> <a href="/acessorios/feminino/oculos/c/quadrado-oculos" title="Quadrado">Quadrado</a></li> 
+           <li> <a href="/acessorios/feminino/oculos/c/redondo-oculos" title="Redondo">Redondo</a></li> 
+           <li> <a href="/acessorios/feminino/oculos/c/gateado-oculos" title="Gateado">Gateado</a></li> 
+           <li> <a href="/search/?text=vintage" title="Vintage">Vintage</a></li> 
+           <li> <a href="/search/?text=espelhado " title="Espelhado">Espelhado</a></li> 
+           <li> <a href="/acessorios/feminino/oculos/c/aviador-oculos" title="Aviador">Aviador</a></li> 
+           <li> <a href="/acessorios/feminino/c/oculos" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/acessorios/feminino/c/oculos?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Beleza e Perfume<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Beleza e Perfume</a> 
+          <ul class="collapse"> 
+           <li> <a href="/beleza-perfume/c/maquiagem" title="Maquiagem">Maquiagem</a></li> 
+           <li> <a href="/beleza-perfume/c/perfumaria" title="Perfumes">Perfumes</a></li> 
+           <li> <a href="/beleza-perfume/c/cuidados-pessoais" title="Cuidados Pessoais">Cuidados Pessoais</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Veja Mais<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Veja Mais</a> 
+          <ul class="collapse"> 
+           <li> <a href="/acessorios/feminino/c/bijuterias" title="Bijuterias">Bijuterias</a></li> 
+           <li> <a href="/acessorios/feminino/c/cintos" title="Cintos">Cintos</a></li> 
+           <li> <a href="/acessorios/feminino/c/chapeus" title="Chapéus">Chapéus</a></li> 
+           <li> <a href="/acessorios/feminino/c/bones" title="Bonés">Bonés</a></li> 
+           <li> <a href="/acessorios/feminino/c/necessaire" title="Necessaire">Necessaire</a></li> 
+           <li> <a href="/acessorios/feminino/c/lencos-echarpes" title="Lenços e Echarpes">Lenços e Echarpes</a></li> 
+           <li> <a href="/acessorios/feminino/c/luvas-gorros" title="Luvas e Gorros">Luvas e Gorros</a></li> 
+           <li> <a href="/lingerie/feminino/c/meias" title="Meias">Meias</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=acessorio+infantil" title="Infantil">Infantil</a></li> 
+           <li> <a href="/masculino/c/acessorios-m" title="Masculino">Masculino</a></li> 
+           <li> <a href="/acessorios/feminino/c/embalagens-presente" title="Embalagem de presentes">Embalagem de presentes</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/c/beleza-perfume"> <img title="" alt="20180502_Cosmeticos.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h22/h5b/10164342259742/20180502-Cosmeticos.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/c/infantil?sort=newOnStore&amp;q=%3AtopDiscount#" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Infantil"> Infantil<i class="ion-chevron-right pull-right"></i> </a> <a href="/c/infantil?sort=newOnStore&amp;q=%3AtopDiscount#" class="hidden-sm hidden-xs " title="Infantil"> Infantil</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Menina<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Menina</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninas/infantil/c/primeiros-passos-menina" title="Primeiros Passos (1 a 4 anos)">Primeiros Passos (1 a 4 anos)</a></li> 
+           <li> <a href="/meninas/infantil/c/infantil-meninas" title="Infantil Meninas (2 a 10 anos)">Infantil Meninas (2 a 10 anos)</a></li> 
+           <li> <a href="/meninas/infantil/c/juvenil-meninas" title="Juvenil (10 a 16 anos)">Juvenil (10 a 16 anos)</a></li> 
+           <li> <a href="/meninas/infantil/c/calcados-infantil-meninas" title="Calçados Meninas">Calçados Meninas</a></li> 
+           <li> </li> 
+           <li> <a href="/meninas/infantil/c/calcinhas-meias-infantil-meninas" title="Calcinhas e Meias">Calcinhas e Meias</a></li> 
+           <li> <a href="/meninas/infantil/c/acessorios-infantil-meninas" title="Acessórios">Acessórios</a></li> 
+           <li> <a href="/meninas/infantil/c/moda-praia-infantil-meninas" title="Moda Praia">Moda Praia</a></li> 
+           <li> <a href="/infantil/c/meninas" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/infantil/c/meninas?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calçados Menina<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calçados Menina</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/botas-infantil-meninas" title="Botas">Botas</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/chinelos-infantil-meninas" title="Chinelos">Chinelos</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sandalias-infantil-meninas" title="Sandálias">Sandálias</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sapatilhas-infantil-meninas" title="Sapatilha">Sapatilha</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/sapatos-infantil-meninas" title="Sapatos">Sapatos</a></li> 
+           <li> <a href="/meninas/infantil/calcados-infantil-meninas/c/tenis-infantil-meninas" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Menino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Menino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninos/infantil/c/primeiros-passos-menino" title="Primeiros Passos (1 a 4 anos)">Primeiros Passos (1 a 4 anos)</a></li> 
+           <li> <a href="/meninos/infantil/c/infantil-meninos" title="Infantil Meninos (2 a 10 anos)">Infantil Meninos (2 a 10 anos)</a></li> 
+           <li> <a href="/meninos/infantil/c/juvenil-meninos" title="Juvenil (10 a 16 anos)">Juvenil (10 a 16 anos)</a></li> 
+           <li> <a href="/meninos/infantil/c/calcados-meninos" title="Calçados Meninos ">Calçados Meninos </a></li> 
+           <li> </li> 
+           <li> <a href="/meninos/infantil/c/cuecas-meias-infantil" title="Cuecas e Meias">Cuecas e Meias</a></li> 
+           <li> <a href="/meninos/infantil/c/acessorios-meninos" title="Acessórios">Acessórios</a></li> 
+           <li> <a href="/meninos/infantil/c/moda-praia-meninos" title="Moda Praia">Moda Praia</a></li> 
+           <li> <a href="/c/infantil" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/infantil/c/meninos?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calçados Menino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calçados Menino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/botas-infantil-meninos" title="Botas">Botas</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/chinelos-infantil-meninos" title="Chinelos">Chinelos</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/papetes-infantil-meninos" title="Papetes">Papetes</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/sandalias-infantil-meninos" title="Sandálias">Sandálias</a></li> 
+           <li> <a href="/meninos/infantil/calcados-meninos/c/tenis-infantil-meninos" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Personagens<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Personagens</a> 
+          <ul class="collapse"> 
+           <li> <a href="/personagens/c/mickey-roupas-sapatos" title="Mickey">Mickey</a></li> 
+           <li> <a href="/personagens/c/minnie-roupas-sapatos" title="Minnie">Minnie</a></li> 
+           <li> <a href="/personagens/c/frozen-roupas-sapatos" title="Frozen">Frozen</a></li> 
+           <li> <a href="/personagens/c/homem-aranha-roupas-sapatos" title="Homem Aranha">Homem Aranha</a></li> 
+           <li> <a href="/personagens/c/avengers-roupas-sapatos" title="Avengers">Avengers</a></li> 
+           <li> <a href="/personagens/c/hello-kitty-roupas-sapatos" title="Hello Kitty">Hello Kitty</a></li> 
+           <li> <a href="/personagens/c/princesas-roupas-sapatos" title="Princesas">Princesas</a></li> 
+           <li> <a href="/marcas/c/liga-da-justica" title="Liga da Justiça">Liga da Justiça</a></li> 
+           <li> <a href="/marcas/c/marvel" title="Marvel">Marvel</a></li> 
+           <li> <a href="/personagens/c/Minions-roupas-sapatos" title="Minions">Minions</a></li> 
+           <li> <a href="/personagens/c/batman-roupas-sapatos" title="Batman">Batman</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://pesquisa.marisa.com.br/hotsite/tal+mae+tal+filho"> <img title="" alt="20180418_Talmae_talfilha.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h91/h59/10145564885022/20180418-Talmae-talfilha.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/c/masculino" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Masculino"> Masculino<i class="ion-chevron-right pull-right"></i> </a> <a href="/c/masculino" class="hidden-sm hidden-xs " title="Masculino"> Masculino</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Roupas Masculinas<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Roupas Masculinas</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas-m/masculino/c/bermudas-shorts-m" title="Bermudas">Bermudas</a></li> 
+           <li> <a href="/roupas-m/masculino/c/camisetas-m" title="Camisetas">Camisetas</a></li> 
+           <li> <a href="/roupas-m/masculino/c/calcas-m" title="Calças">Calças</a></li> 
+           <li> <a href="/roupas-m/masculino/c/camisas-m" title="Camisas">Camisas</a></li> 
+           <li> </li> 
+           <li> </li> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=moletom+masculino&amp;p=moletom%20ma&amp;ranking=1&amp;typeclick=1&amp;ac_pos=header" title="Moletom">Moletom</a></li> 
+           <li> <a href="/roupas-m/masculino/c/polos-m" title="Polos">Polos</a></li> 
+           <li> <a href="/roupas-m/masculino/c/bermudas-shorts-m" title="Shorts">Shorts</a></li> 
+           <li> </li> 
+           <li> <a href="/moda-praia-m/masculino/c/sungas-m" title="Sunga">Sunga</a></li> 
+           <li> <a href="/masculino/c/roupas-m" title="+ Novidades">+ Novidades</a></li> 
+           <li> <a href="/c/masculino?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Moda Íntima<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Moda Íntima</a> 
+          <ul class="collapse"> 
+           <li> <a href="/masculino/c/cuecas-m" title="Cuecas">Cuecas</a></li> 
+           <li> <a href="/masculino/c/meias-m" title="Meias">Meias</a></li> 
+           <li> <a href="/masculino/c/pijamas-m" title="Pijamas">Pijamas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calçados Masculinos<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calçados Masculinos</a> 
+          <ul class="collapse"> 
+           <li> <a href="/calcados-m/masculino/c/botas-m" title="Bota">Bota</a></li> 
+           <li> <a href="/calcados-m/masculino/c/chinelos-m" title="Chinelo">Chinelo</a></li> 
+           <li> <a href="/calcados-m/masculino/c/sandalias-m" title="Sandálias">Sandálias</a></li> 
+           <li> <a href="/calcados-m/masculino/c/sapatenis-m" title="Sapatênis">Sapatênis</a></li> 
+           <li> <a href="/calcados-m/masculino/c/tenis-m" title="Tênis">Tênis</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Acessórios<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Acessórios</a> 
+          <ul class="collapse"> 
+           <li> <a href="/masculino/c/relogios-m" title="Relógios">Relógios</a></li> 
+           <li> <a href="/acessorios-m/masculino/c/bones-m" title="Bonés">Bonés</a></li> 
+           <li> <a href="/acessorios-m/masculino/c/cintos-m" title="Cintos">Cintos</a></li> 
+           <li> <a href="/acessorios-m/masculino/c/mochilas-m" title="Mochilas">Mochilas</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/marcas/c/west-coast"> <img title="" alt="BMenu_20180423_WestCoast.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/heb/hb3/10148526915614/BMenu-20180423-WestCoast.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="/promocao/c/dia-maes" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Dia das Mães"> Dia das Mães<i class="ion-chevron-right pull-right"></i> </a> <a href="/promocao/c/dia-maes" class="hidden-sm hidden-xs " title="Dia das Mães"> Dia das Mães</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Dicas de Presentes<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Dicas de Presentes</a> 
+          <ul class="collapse"> 
+           <li> <a href="https://pesquisa.marisa.com.br/busca?q=vestidos&amp;sort=11" title="Vestidos">Vestidos</a></li> 
+           <li> <a href="/roupas/feminino/c/blusas" title="Blusas">Blusas</a></li> 
+           <li> <a href="/roupas/feminino/c/malhas-sueteres" title="Cardigans e Suéteres">Cardigans e Suéteres</a></li> 
+           <li> <a href="/roupas/feminino/c/casacos-jaquetas" title="Casacos">Casacos</a></li> 
+           <li> <a href="/roupas/feminino/calcas/c/jeans-calcas" title="Jeans">Jeans</a></li> 
+           <li> <a href="/calcados/feminino/c/sapatilhas" title="Sapatilhas">Sapatilhas</a></li> 
+           <li> <a href="/calcados/feminino/c/botas" title="Botas">Botas</a></li> 
+           <li> <a href="/acessorios/feminino/c/bolsas" title="Bolsas">Bolsas</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-oferta" title="+ Ofertas">+ Ofertas</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Combos<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Combos</a> 
+          <ul class="collapse"> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-vestido" title="Vestido">Vestido</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/dia+das+maes+cardigan+colar+caixa" title="Cardigan">Cardigan</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-blusa-plus" title="Blusa Plus Size">Blusa Plus Size</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-sutiacalcinha" title="Lingerie">Lingerie</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-scarpin" title="Scarpin">Scarpin</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-bolsa" title="Bolsa">Bolsa</a></li> 
+           <li> <a href="/dia-maes/promocao/c/diamaes-relogio" title="Relógio">Relógio</a></li> 
+           <li> <a href="https://www.marisa.com.br/maes-presentes-especiais" title="+ Ver Todos">+ Ver Todos</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Tipos de Mães<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Tipos de Mães</a> 
+          <ul class="collapse"> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/roupas+calcados+acessorios+mae+poderosa" title="Poderosa">Poderosa</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/roupas+calcados+acessorios+mae+romantica" title="Romântica">Romântica</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/roupas+calcados+acessorios+mae+descolada" title="Moderna">Moderna</a></li> 
+           <li> <a href="https://pesquisa.marisa.com.br/hotsite/roupas+calcados+acessorios+mae+basica" title="Básica">Básica</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Faixa de Preço<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Faixa de Preço</a> 
+          <ul class="collapse"> 
+           <li> <a href="https://www.marisa.com.br/promocao/c/dia-maes?sort=topSold&amp;q=%3AnewOnStore%3Aprice%3AR%240-R%249%2C99%3Aprice%3AR%2410-R%2415%2C99%3Aprice%3AR%2416-R%2419%2C99%3Aprice%3AR%2420-R%2429%2C99&amp;show=Page#" title="Até 29,99">Até 29,99</a></li> 
+           <li> <a href="https://www.marisa.com.br/promocao/c/dia-maes?q=%3AnewOnStore%3Aprice%3AR%2430-R%2439%2C99&amp;text=#" title="Até 39,99">Até 39,99</a></li> 
+           <li> <a href="https://www.marisa.com.br/promocao/c/dia-maes?q=%3AnewOnStore%3Aprice%3AR%2440-R%2449%2C99%3Aprice%3AR%2450-R%2459%2C99%3Aprice%3AR%2460-R%2469%2C99&amp;text=#" title="Até 69,99">Até 69,99</a></li> 
+           <li> <a href="https://www.marisa.com.br/promocao/c/dia-maes?q=%3AnewOnStore%3Aprice%3AR%2470-R%2499%2C99&amp;text=#" title="Até 99,99">Até 99,99</a></li> 
+           <li> <a href="/promocao/c/dia-maes" title="+ Ver Tudo">+ Ver Tudo</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/promocao/c/dia-maes"> <img title="" alt="20180420_AntecipeMães--.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/h2b/hb9/10146477178910/20180420-AntecipeM-es-.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar-first-level-link"> <a href="https://www.marisa.com.br/ofertas" class="hidden-md hidden-lg " data-action="menubar:open-submenu" title="Outlet"> Outlet<i class="ion-chevron-right pull-right"></i> </a> <a href="https://www.marisa.com.br/ofertas" class="hidden-sm hidden-xs " title="Outlet"> Outlet</a>
+        <ul class="collapse"> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Feminino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Feminino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/roupas/feminino/c/blusas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Blusas">Blusas</a></li> 
+           <li> <a href="/roupas/feminino/c/shorts?sort=topDiscount&amp;q=%3AnewOnStore#" title="Shorts">Shorts</a></li> 
+           <li> <a href="/roupas/feminino/c/calcas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Calças">Calças</a></li> 
+           <li> <a href="/roupas/feminino/c/saias?sort=topDiscount&amp;q=%3AnewOnStore#" title="Saias">Saias</a></li> 
+           <li> <a href="/roupas/feminino/c/vestidos?sort=topDiscount&amp;q=%3AnewOnStore#" title="Vestidos">Vestidos</a></li> 
+           <li> <a href="/feminino/c/plus-size?sort=topDiscount&amp;q=%3AnewOnStore#" title="Plus Size">Plus Size</a></li> 
+           <li> <a href="/roupas/feminino/c/moda-praia?sort=topDiscount&amp;q=%3AnewOnStore#" title="Moda Praia">Moda Praia</a></li> 
+           <li> <a href="/feminino/c/acessorios?sort=topDiscount&amp;q=%3Aprice-asc#" title="Acessórios">Acessórios</a></li> 
+           <li> <a href="/feminino/c/roupas?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ver Tudo">+ Ver Tudo</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Calçados<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Calçados</a> 
+          <ul class="collapse"> 
+           <li> <a href="/calcados/feminino/c/botas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Botas">Botas</a></li> 
+           <li> <a href="/calcados/feminino/c/chinelos?sort=topDiscount&amp;q=%3AtopSold#" title="Chinelos">Chinelos</a></li> 
+           <li> <a href="/calcados/feminino/c/oxford?sort=topDiscount&amp;q=%3AnewOnStore&amp;show=Page#" title="Oxford">Oxford</a></li> 
+           <li> <a href="/calcados/feminino/c/peep-toe?sort=topDiscount&amp;q=%3AnewOnStore#" title="Peep Toe">Peep Toe</a></li> 
+           <li> <a href="/calcados/feminino/c/sandalias?sort=topDiscount&amp;q=%3AnewOnStore#" title="Sandálias">Sandálias</a></li> 
+           <li> <a href="/calcados/feminino/c/sapatilhas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Sapatilhas">Sapatilhas</a></li> 
+           <li> <a href="/calcados/feminino/c/tenis?sort=topDiscount&amp;q=%3AnewOnStore#" title="Tênis">Tênis</a></li> 
+           <li> <a href="/feminino/c/calcados?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ver Tudo">+ Ver Tudo</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Lingerie<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Lingerie</a> 
+          <ul class="collapse"> 
+           <li> <a href="/lingerie/feminino/c/calcinhas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Calcinhas">Calcinhas</a></li> 
+           <li> <a href="/lingerie/feminino/c/sutias?sort=topDiscount&amp;q=%3AnewOnStore#" title="Sutiãs">Sutiãs</a></li> 
+           <li> <a href="/lingerie/feminino/c/body-sensual?sort=topDiscount&amp;q=%3AnewOnStore#" title="Body Sensual">Body Sensual</a></li> 
+           <li> <a href="/lingerie/feminino/c/camisete?sort=topDiscount&amp;q=%3AnewOnStore#" title="Camisetes">Camisetes</a></li> 
+           <li> <a href="/lingerie/feminino/c/cintas-modeladores?sort=topDiscount&amp;q=%3AnewOnStore#" title="Cintas e Modeladores">Cintas e Modeladores</a></li> 
+           <li> <a href="/lingerie/feminino/meias/c/meia-calca-meias?sort=topDiscount&amp;q=%3AnewOnStore&amp;show=Page#" title="Meia Calça">Meia Calça</a></li> 
+           <li> <a href="/lingerie/feminino/meias/c/meias-feminina?sort=topDiscount&amp;q=%3AnewOnStore#" title="Meias">Meias</a></li> 
+           <li> <a href="/feminino/c/lingerie?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ver Tudo">+ Ver Tudo</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Masculino<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Masculino</a> 
+          <ul class="collapse"> 
+           <li> <a href="/moda-praia-m/masculino/c/bermudas-m?sort=topDiscount&amp;q=%3AnewOnStore#" title="Bermudas">Bermudas</a></li> 
+           <li> <a href="/roupas-m/masculino/c/camisetas-m?sort=topDiscount&amp;q=%3AnewOnStore&amp;show=Page#" title="Camisetas">Camisetas</a></li> 
+           <li> <a href="/roupas-m/masculino/c/calcas-m?sort=topDiscount&amp;q=%3AnewOnStore" title="Calças">Calças</a></li> 
+           <li> <a href="/roupas-m/masculino/c/camisas-m?sort=topDiscount&amp;q=%3AnewOnStore#" title="Camisas">Camisas</a></li> 
+           <li> <a href="/roupas-m/masculino/c/polos-m?sort=topDiscount&amp;q=%3AnewOnStore#" title="Polos">Polos</a></li> 
+           <li> <a href="/moda-praia-m/masculino/c/sungas-m?sort=topDiscount&amp;q=%3AnewOnStore#" title="Sunga">Sunga</a></li> 
+           <li> <a href="/masculino/c/calcados-m?sort=topDiscount&amp;q=%3AnewOnStore#" title="Calçados ">Calçados </a></li> 
+           <li> <a href="/c/masculino?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ver Tudo">+ Ver Tudo</a></li> 
+          </ul> </li> 
+         <li class="header-menubar-second-level-link"> <a href="" class="hidden-md hidden-lg" data-action="menubar:open-submenu" target=""> Infantil<i class="ion-chevron-right pull-right"></i> </a> <a href="" class="hidden-sm hidden-xs" target=""> Infantil</a> 
+          <ul class="collapse"> 
+           <li> <a href="/meninas/infantil/c/infantil-meninas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Infantil Meninas (2 a 10 anos)">Infantil Meninas (2 a 10 anos)</a></li> 
+           <li> <a href="/meninos/infantil/c/infantil-meninos?sort=topDiscount&amp;q=%3AnewOnStore#" title="Infantil Meninos (2 a 10 anos)">Infantil Meninos (2 a 10 anos)</a></li> 
+           <li> <a href="/meninas/infantil/c/calcados-infantil-meninas?sort=topDiscount&amp;q=%3AnewOnStore#" title="Calçados Meninas">Calçados Meninas</a></li> 
+           <li> <a href="/meninos/infantil/c/calcados-meninos?sort=topDiscount&amp;q=%3AnewOnStore#" title="Calçados Meninos">Calçados Meninos</a></li> 
+           <li> <a href="/meninas/infantil/c/acessorios-infantil-meninas?sort=topDiscount&amp;q=%3AnewOnStore&amp;show=Page#" title="Acessórios Meninas">Acessórios Meninas</a></li> 
+           <li> <a href="/meninos/infantil/c/acessorios-meninos?sort=topDiscount&amp;q=%3AnewOnStore#" title="Acessórios Meninos">Acessórios Meninos</a></li> 
+           <li> <a href="/c/infantil?sort=topDiscount&amp;q=%3AnewOnStore#" title="+ Ver tudo">+ Ver tudo</a></li> 
+          </ul> </li> 
+         <li class="header--menubar--image hidden-xs hidden-sm"> 
+          <div class="marisa--banner-component"> 
+           <a href="https://www.marisa.com.br/ofertas"> <img title="" alt="BMenu_20180503_LiquidacaoMarisa.jpg" src="https://images2.marisa.com.br/medias/sys_master/images/images/hde/hc9/10164409991198/BMenu-20180503-LiquidacaoMarisa.jpg" class="banner-component--image"> </a> 
+          </div></li> 
+        </ul> </li>
+       <li class="yCmsComponent header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="/my-account/orders" title="Meus Pedidos">Meus Pedidos</a></li>
+       <li class="yCmsComponent header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="/store-finder" title="Nossas Lojas">Nossas Lojas</a></li>
+       <li class="yCmsComponent header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="/cartoes-marisa" title="Cartões Marisa">Cartões Marisa</a></li>
+       <li class="yCmsComponent header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="/entrega" title="Prazo de Entrega">Prazo de Entrega</a></li>
+       <li class="yCmsComponent header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="/lista-de-desejos" title="Lista de Desejos">Lista de Desejos</a></li>
+       <li class="dropdown header-menubar--top-menubar--item hidden-lg hidden-md"> <a href="#" class="hidden-md hidden-lg" data-action="menubar:open-submenu"> Atendimento<i class="ion-chevron-right pull-right"></i> </a> 
+        <ul class="collapse"> 
+         <li class="yCmsComponent"> <a href="/como-comprar-marisa" title="Como comprar">Como comprar</a></li>
+         <li class="yCmsComponent"> <a href="/faq" title="Fale conosco">Fale conosco</a></li>
+        </ul> </li> 
+      </ul> 
+     </div> 
+    </nav> 
+    <div class=" bt1 mt10"> 
+    </div> 
+   </header> 
+   <div class="yCmsContentSlot container-fluid"> 
+   </div>
+   <a id="skip-to-content"></a> 
+   <section class="marisa--main-content"> 
+    <div class="global-alerts container"> 
+    </div> 
+    <style type="text/css">
+#floaterMarisa {
+    width: 170px;
+    height: 170px;
+    z-index: 100000;
+    bottom: 115px;
+    right: 35px;
+    position: fixed;
+}
+
+#floaterMarisa a.closefloaterMarisa {
+    width: 28px;
+    height: 28px;
+    top: 0px;
+    right: 13px;
+    position: absolute;
+    cursor: pointer;
+}
+</style> 
+    <div id="floaterMarisa" class="hidden-xs">
+     <a href="https://www.marisa.com.br/todos-os-sonhos"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/hdf/h35/10144611434526/banner-flutuante-sonhoMarisa.gif" alt=""></a>
+     <a onclick="document.getElementById('floaterMarisa').style.display='none';" class="closefloaterMarisa"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/hca/h08/9667752624158/fechar-bf.png" alt=""></a>
+    </div>
+    <div class="row"> 
+     <div class="col-md-12 p0"> 
+      <img class="img-responsive hidden-xs hidden-sm" src="https://images2.marisa.com.br/medias/sys_master/images/images/ha4/h63/9929032499230/Combo-calcinha-sutia-desk.jpg" width="2000" height="285" alt=""> 
+      <img class="img-responsive hidden-sm hidden-md hidden-lg hidden-xl" src="https://images2.marisa.com.br/medias/sys_master/images/images/ha3/h52/9929033154590/Combo-calcinha-sutia-Mob.jpg" width="675" height="195" alt=""> 
+      <img class="img-responsive hidden-xs hidden-md hidden-lg hidden-xl" src="https://images2.marisa.com.br/medias/sys_master/images/images/h80/hfa/9929033842718/Combo-calcinha-sutia-Tab.jpg" width="1245" height="285" alt=""> 
+     </div>
+    </div>
+    <div chaordic="top"></div>
+    <section class="yCmsContentSlot breadcrumb-content"> 
+     <div class="container"> 
+      <h1 class="title border_bottom"> Kit Dia das Mães - Sutiã + Calcinha</h1> 
+      <div class="breadcrumb-section"> 
+       <ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"> 
+        <li> <a href="/"><span>Home</span></a> </li> 
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="/promocao/c/dia-maes"> <span itemprop="name">Presentes Para Dia Das Mães</span> 
+          <meta itemprop="position" content="0"> </a> </li> 
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"> <a itemprop="item" href="/c/promocao"> <span itemprop="name">Promoção</span> 
+          <meta itemprop="position" content="1"> </a> </li> 
+        <!-- <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="active"><span itemprop="name">Kit Dia das Mães - Sutiã + Calcinha</span></li> --> 
+        <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" class="active"> <span itemprop="name">Kit Dia das Mães - Sutiã + Calcinha</span> 
+         <meta itemprop="position" content="2"> </li> 
+       </ul> 
+      </div> 
+     </div> 
+    </section>
+    <input class="ListName" type="hidden" value="CategoryList: Presentes Para Dia Das Mães - Promoção - Kit Dia das Mães - Sutiã + Calcinha"> 
+    <div class="yCmsContentSlot product-grid-right-result-slot"> 
+     <div class="yCmsComponent product__list--wrapper yComponentWrapper product-grid-right-result-component"> 
+      <form id="form--add-product-to-cart" commandNname="chaordicAddCartForm" class="hidden" action="/cart/add" method="post"> 
+       <input type="hidden" name="productCodePost"> 
+       <input type="hidden" name="qty" value="1"> 
+       <div> 
+        <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+       </div>
+      </form> 
+      <div class="container"> 
+       <div class="yCmsContentSlot product-grid-left-refinements-slot"> 
+        <div class="yCmsComponent yComponentWrapper product-grid-left-refinements-component pr0 pl0"> 
+         <div id="product-facet" class="product__facet js-product-facet"> 
+          <div class=" requirements hidden-xs hidden-sm"> 
+           <div class="facet js-facet"> 
+            <div class="dropdown"> 
+             <div class="facet__name js-facet-name btn btn-link btn-square hidden-sm hidden-xs" data-toggle="dropdown"> 
+              <span class="glyphicon facet__arrow"></span> Kit Dia das Mães - Sutiã + Calcinha
+             </div> 
+             <div class="facet__name__mobile js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+              <span class="glyphicon facet__arrow"></span> Kit Dia das Mães - Sutiã + Calcinha
+             </div> 
+             <div class="facet__values js-facet-values js-facet-form dropdown-menu"> 
+              <div class="facet__list js-facet-list js-facet-top-values"> 
+               <a href="/dia-maes/promocao/c/diamaes-sutiacalcinha"> <option data-url="/dia-maes/promocao/c/diamaes-sutiacalcinha" class="option-level-0"> &nbsp;Kit Dia das Mães - Sutiã + Calcinha</option> </a> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-xs-12 requirements box-filters visible-xs visible-sm collapse pl0 pr0"> 
+           <div class="hidden-sm hidden-xs"> 
+            <a href="#refinements-collapse2" class="btn btn-default btn-inverse btn-square col-xs-12" data-toggle="collapse">Kit Dia das Mães - Sutiã + Calcinha</a> 
+           </div> 
+           <div id="categoryFilter" class="hidden-lg hidden-md mb10"> 
+            <a href="#refinements-collapse2" class="" data-toggle="collapse"> <span class="glyphicon facet__arrow"></span> Kit Dia das Mães - Sutiã + Calcinha</a> 
+           </div> 
+           <div class="collapse" id="refinements-collapse2"> 
+            <a href="/dia-maes/promocao/c/diamaes-sutiacalcinha"> <option data-url="/dia-maes/promocao/c/diamaes-sutiacalcinha" class="option-level-0"> &nbsp;Kit Dia das Mães - Sutiã + Calcinha</option> </a> 
+           </div> 
+          </div> 
+         </div> 
+         <!-- <div class="marisa-category-filter-container">
+    <select class="marisasimplecategoryfilter-selectbox">
+        <option data-url="/dia-maes/promocao/c/diamaes-sutiacalcinha" class="option-level-0">
+            &nbsp;Kit Dia das Mães - Sutiã + Calcinha</option>
+        </select>
+</div> --> 
+        </div>
+        <div class="yCmsComponent yComponentWrapper product-grid-left-refinements-component pr0 pl0"> 
+         <!-- <div class="container"> --> 
+         <div id="product-facet" class="product__facet js-product-facet"> 
+          <!-- <div class="row"> --> 
+          <div class=" requirements hidden-xs hidden-sm"> 
+           <div class="facet js-facet"> 
+            <div class="dropdown"> 
+             <div class="facet__name js-facet-name btn btn-link btn-square hidden-sm hidden-xs" data-toggle="dropdown"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Preço --> Preço
+             </div> 
+             <div class="facet__name__mobile js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Preço --> Preço
+             </div> 
+             <div class="facet__values js-facet-values js-facet-form dropdown-menu"> 
+              <ul class="facet__list js-facet-list "> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:price:R$10-R$15,99"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> R$10-R$15,99&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:price:R$30-R$39,99"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> R$30-R$39,99&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+              </ul> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="facet js-facet"> 
+            <div class="dropdown"> 
+             <div class="facet__name js-facet-name btn btn-link btn-square hidden-sm hidden-xs" data-toggle="dropdown"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Cor --> Cor
+             </div> 
+             <div class="facet__name__mobile js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Cor --> Cor
+             </div> 
+             <div class="facet__values js-facet-values js-facet-form dropdown-menu"> 
+              <ul id="box_facet_cor" class="facet__list js-facet-list "> 
+               <li class="horizontal-li"> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:color:preto"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 
+                    <div class="color-category" title="preto" style="background-color: #000000"></div> <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class="horizontal-li"> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:color:roxo"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 
+                    <div class="color-category" title="roxo" style="background-color: #800080"></div> <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+              </ul> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="facet js-facet"> 
+            <div class="dropdown"> 
+             <div class="facet__name js-facet-name btn btn-link btn-square hidden-sm hidden-xs" data-toggle="dropdown"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Tamanho --> Tamanho
+             </div> 
+             <div class="facet__name__mobile js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Tamanho --> Tamanho
+             </div> 
+             <div class="facet__values js-facet-values js-facet-form dropdown-menu"> 
+              <ul id="box_facet_tamanho" class="facet__list js-facet-list "> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:P"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> P&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:M"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> M&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:G"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> G&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:GG"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> GG&nbsp; <span class="facet__value__count">(3)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:40"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 40&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:42"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 42&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:44"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 44&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:sizes:46"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 46&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                </form> </li> 
+              </ul> 
+             </div> 
+            </div> 
+           </div> 
+           <div class="facet js-facet"> 
+            <div class="dropdown"> 
+             <div class="facet__name js-facet-name btn btn-link btn-square hidden-sm hidden-xs" data-toggle="dropdown"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Marca --> Marca
+             </div> 
+             <div class="facet__name__mobile js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+              <span class="glyphicon facet__arrow"></span> 
+              <!-- Shop by Marca --> Marca
+             </div> 
+             <div class="facet__values js-facet-values js-facet-form dropdown-menu"> 
+              <ul class="facet__list js-facet-list "> 
+               <li class=""> 
+                <form action="#" method="get"> 
+                 <input type="hidden" name="q" value=":newOnStore:brand:marisa"> 
+                 <input type="hidden" name="text" value=""> 
+                 <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> MARISA&nbsp; <span class="facet__value__count">(8)</span> </span> </span> </label> 
+                </form> </li> 
+              </ul> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="col-xs-12 requirements box-filters visible-xs visible-sm collapse pl0 pr0"> 
+           <div class="pl0"> 
+            <a id="filterMobile" href="#refinements-collapse" class="btn btn-default btn-inverse btn-square col-xs-12" data-toggle="collapse"> <i class="ion-search"></i> Filtrar</a> 
+           </div> 
+           <div class="collapse" id="refinements-collapse"> 
+            <div class="facet js-facet"> 
+             <div class="mobile__collapse"> 
+              <a data-toggle="collapse" href="#collapse__Preço" class="collapsed"> 
+               <div class="facet__name js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+                <span class="glyphicon facet__arrow"></span> 
+                <!-- Shop by Preço --> Preço
+               </div> </a> 
+              <div class="facet__values__mobile js-facet-values js-facet-form collapse" id="collapse__Preço"> 
+               <ul class="facet__list js-facet-list "> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:price:R$10-R$15,99"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> R$10-R$15,99&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:price:R$30-R$39,99"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> R$30-R$39,99&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="facet js-facet"> 
+             <div class="mobile__collapse"> 
+              <a data-toggle="collapse" href="#collapse__Cor" class="collapsed"> 
+               <div class="facet__name js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+                <span class="glyphicon facet__arrow"></span> 
+                <!-- Shop by Cor --> Cor
+               </div> </a> 
+              <div class="facet__values__mobile js-facet-values js-facet-form collapse" id="collapse__Cor"> 
+               <ul class="facet__list js-facet-list "> 
+                <li class="horizontal-li"> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:color:preto"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 
+                     <div class="color-category" style="background-color: #000000"></div> <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class="horizontal-li"> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:color:roxo"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 
+                     <div class="color-category" style="background-color: #800080"></div> <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="facet js-facet"> 
+             <div class="mobile__collapse"> 
+              <a data-toggle="collapse" href="#collapse__Tamanho" class="collapsed"> 
+               <div class="facet__name js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+                <span class="glyphicon facet__arrow"></span> 
+                <!-- Shop by Tamanho --> Tamanho
+               </div> </a> 
+              <div class="facet__values__mobile js-facet-values js-facet-form collapse" id="collapse__Tamanho"> 
+               <ul class="facet__list js-facet-list "> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:P"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> P&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:M"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> M&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:G"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> G&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:GG"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> GG&nbsp; <span class="facet__value__count">(3)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:40"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 40&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:42"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 42&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:44"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 44&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:sizes:46"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> 46&nbsp; <span class="facet__value__count">(4)</span> </span> </span> </label> 
+                 </form> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+            <div class="facet js-facet"> 
+             <div class="mobile__collapse"> 
+              <a data-toggle="collapse" href="#collapse__Marca" class="collapsed"> 
+               <div class="facet__name js-facet-name btn btn-link btn-square visible-sm visible-xs"> 
+                <span class="glyphicon facet__arrow"></span> 
+                <!-- Shop by Marca --> Marca
+               </div> </a> 
+              <div class="facet__values__mobile js-facet-values js-facet-form collapse" id="collapse__Marca"> 
+               <ul class="facet__list js-facet-list "> 
+                <li class=""> 
+                 <form action="#" method="get"> 
+                  <input type="hidden" name="q" value=":newOnStore:brand:marisa"> 
+                  <input type="hidden" name="text" value=""> 
+                  <label> <input type="checkbox" class="facet__list__checkbox js-facet-checkbox sr-only"> <span class="facet__list__label"> <span class="facet__list__mark"></span> <span class="facet__list__text"> MARISA&nbsp; <span class="facet__value__count">(8)</span> </span> </span> </label> 
+                 </form> </li> 
+               </ul> 
+              </div> 
+             </div> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="row"> 
+          <div class=" applied-filters"> 
+          </div> 
+          <!-- </div> --> 
+         </div> 
+         <!-- </div> -->
+        </div>
+       </div>
+       <div id="filterLancamento" class="col-xs-12 col-md-3 sort-mobile pr0 pull-right pl0 visible-sm visible-xs"></div> 
+       <div class="clear"></div> 
+       <div id="paginationTopPLP" class="clearfix"> 
+        <div class="pagination-bar top"> 
+         <div class="pagination-bar-results hidden-sm hidden-xs ">
+           8 Produto(s)
+         </div> 
+         <div class="pagination-toolbar"> 
+          <div class="helper clearfix hidden-md hidden-lg"></div> 
+          <div class="sort-refine-bar hidden-sm hidden-xs"> 
+           <div class="form-group"> 
+            <form id="sortForm1" name="sortForm1" method="get" action="#"> 
+             <select id="sortOptions1" name="sort" class="btn btn-link btn-square" title="Ordenar por:"> <option disabled>Ordenar por:</option> <option value="newOnStore" selected> Lançamentos</option> <option value="price-asc"> Menor Preço</option> <option value="price-desc"> Maior Preço</option> <option value="topSold"> Mais vendidos</option> <option value="topDiscount"> Maior desconto</option> <option value="topRated"> Melhores avaliados</option> </select> 
+             <input type="hidden" name="q" value=":newOnStore"> 
+            </form> 
+           </div> 
+           <div class="pagination-wrap"> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="product__listing product__grid"> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Calcinha Feminina Fio Dental Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032343144"> 
+         <input class="productPrice" type="hidden" value="15.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032343144"></like-button> 
+          <a class="thumb" href="/calcinha-feminina-fio-dental-tule-swarovski-roxo/p/10032343144" title="Calcinha Feminina Fio Dental Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/hfc/hf3/9862416367646/CALCINHA-SWAROVSKI-ALVORADA-RXE-P-null-10032343151-C1.jpg" alt="Image_Calcinha Feminina Fio Dental Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/calcinha-feminina-fio-dental-tule-swarovski-roxo/p/10032343144" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069614/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069614/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/calcinha-feminina-fio-dental-tule-swarovski-roxo/p/10032343144" data-match-height="product-name"> Calcinha Feminina Fio Dental Tule Swarovski</a> 
+          <h3 class="headingTag">Calcinha Feminina Fio Dental Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/calcinha-feminina-fio-dental-tule-swarovski-roxo/p/10032343144"> 
+             <div class="price" data-match-height="price-shipment-00069614"> 
+              <div class="actual-price"> 
+               <span>R$ 15,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Calcinha Feminina Fio Dental Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032343045"> 
+         <input class="productPrice" type="hidden" value="15.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032343045"></like-button> 
+          <a class="thumb" href="/calcinha-feminina-fio-dental-tule-swarovski-preto/p/10032343045" title="Calcinha Feminina Fio Dental Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h0e/h40/9863757070366/CALCINHA-SWAROVSKI-PRETO-PTO-P-null-10032343052-C1.jpg" alt="Image_Calcinha Feminina Fio Dental Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/calcinha-feminina-fio-dental-tule-swarovski-preto/p/10032343045" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069610/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069610/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/calcinha-feminina-fio-dental-tule-swarovski-preto/p/10032343045" data-match-height="product-name"> Calcinha Feminina Fio Dental Tule Swarovski</a> 
+          <h3 class="headingTag">Calcinha Feminina Fio Dental Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/calcinha-feminina-fio-dental-tule-swarovski-preto/p/10032343045"> 
+             <div class="price" data-match-height="price-shipment-00069610"> 
+              <div class="actual-price"> 
+               <span>R$ 15,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Calcinha Feminina Tanga Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032342895"> 
+         <input class="productPrice" type="hidden" value="15.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032342895"></like-button> 
+          <a class="thumb" href="/calcinha-feminina-tanga-tule-swarovski-roxo/p/10032342895" title="Calcinha Feminina Tanga Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/hdb/h76/9863121338398/Calcinha-Feminina-Tanga-Tule-Strass-Marisa-null-10032342901-C1.jpg" alt="Image_Calcinha Feminina Tanga Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/calcinha-feminina-tanga-tule-swarovski-roxo/p/10032342895" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069606/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069606/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/calcinha-feminina-tanga-tule-swarovski-roxo/p/10032342895" data-match-height="product-name"> Calcinha Feminina Tanga Tule Swarovski</a> 
+          <h3 class="headingTag">Calcinha Feminina Tanga Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/calcinha-feminina-tanga-tule-swarovski-roxo/p/10032342895"> 
+             <div class="price" data-match-height="price-shipment-00069606"> 
+              <div class="actual-price"> 
+               <span>R$ 15,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Calcinha Feminina Tanga Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032342796"> 
+         <input class="productPrice" type="hidden" value="15.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032342796"></like-button> 
+          <a class="thumb" href="/calcinha-feminina-tanga-tule-swarovski-preto/p/10032342796" title="Calcinha Feminina Tanga Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/hfc/h64/9843901333534/CALCINHA-SWAROVSKI-PRETO-PTO-P-null-10032342802-C1.jpg" alt="Image_Calcinha Feminina Tanga Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/calcinha-feminina-tanga-tule-swarovski-preto/p/10032342796" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069602/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069602/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/calcinha-feminina-tanga-tule-swarovski-preto/p/10032342796" data-match-height="product-name"> Calcinha Feminina Tanga Tule Swarovski</a> 
+          <h3 class="headingTag">Calcinha Feminina Tanga Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/calcinha-feminina-tanga-tule-swarovski-preto/p/10032342796"> 
+             <div class="price" data-match-height="price-shipment-00069602"> 
+              <div class="actual-price"> 
+               <span>R$ 15,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Sutiã Feminino Com Base Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032343090"> 
+         <input class="productPrice" type="hidden" value="39.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032343090"></like-button> 
+          <a class="thumb" href="/suti%c3%a3-feminino-com-base-tule-swarovski-roxo/p/10032343090" title="Sutiã Feminino Com Base Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h05/hbb/9863124910110/SOUTIEN-SWAROVSKI-ALVORADA-RXE-42-null-10032343113-C1.jpg" alt="Image_Sutiã Feminino Com Base Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/suti%c3%a3-feminino-com-base-tule-swarovski-roxo/p/10032343090" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069612/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069612/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/suti%c3%a3-feminino-com-base-tule-swarovski-roxo/p/10032343090" data-match-height="product-name"> Sutiã Feminino Com Base Tule Swarovski</a> 
+          <h3 class="headingTag">Sutiã Feminino Com Base Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/suti%c3%a3-feminino-com-base-tule-swarovski-roxo/p/10032343090"> 
+             <div class="price" data-match-height="price-shipment-00069612"> 
+              <div class="actual-price"> 
+               <span>R$ 39,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Sutiã Feminino Com Base Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032342949"> 
+         <input class="productPrice" type="hidden" value="39.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032342949"></like-button> 
+          <a class="thumb" href="/suti%c3%a3-feminino-com-base-tule-swarovski-preto/p/10032342949" title="Sutiã Feminino Com Base Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h76/h94/9863755038750/SOUTIEN-SWAROVSKI-PRETO-PTO-42-null-10032342963-C1.jpg" alt="Image_Sutiã Feminino Com Base Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/suti%c3%a3-feminino-com-base-tule-swarovski-preto/p/10032342949" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069608/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069608/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/suti%c3%a3-feminino-com-base-tule-swarovski-preto/p/10032342949" data-match-height="product-name"> Sutiã Feminino Com Base Tule Swarovski</a> 
+          <h3 class="headingTag">Sutiã Feminino Com Base Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/suti%c3%a3-feminino-com-base-tule-swarovski-preto/p/10032342949"> 
+             <div class="price" data-match-height="price-shipment-00069608"> 
+              <div class="actual-price"> 
+               <span>R$ 39,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Sutiã Feminino High Neck Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032342840"> 
+         <input class="productPrice" type="hidden" value="39.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032342840"></like-button> 
+          <a class="thumb" href="/suti%c3%a3-feminino-high-neck-tule-swarovski-roxo/p/10032342840" title="Sutiã Feminino High Neck Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/he9/h83/9862412697630/SOUTIEN-SWAROVSKI-ALVORADA-RXE-42-null-10032342864-C1.jpg" alt="Image_Sutiã Feminino High Neck Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/suti%c3%a3-feminino-high-neck-tule-swarovski-roxo/p/10032342840" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069604/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069604/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/suti%c3%a3-feminino-high-neck-tule-swarovski-roxo/p/10032342840" data-match-height="product-name"> Sutiã Feminino High Neck Tule Swarovski</a> 
+          <h3 class="headingTag">Sutiã Feminino High Neck Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/suti%c3%a3-feminino-high-neck-tule-swarovski-roxo/p/10032342840"> 
+             <div class="price" data-match-height="price-shipment-00069604"> 
+              <div class="actual-price"> 
+               <span>R$ 39,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+        <div class="product-item"> 
+         <input class="productName" type="hidden" value="Sutiã Feminino High Neck Tule Swarovski"> 
+         <input class="productId" type="hidden" value="10032342741"> 
+         <input class="productPrice" type="hidden" value="39.99"> 
+         <input class="productCategory" type="hidden" value="Kit Dia das Mães - Sutiã + Calcinha"> 
+         <input class="productBrand" type="hidden" value=""> 
+         <div class="thumb-wrapper"> 
+          <like-button product-id="10032342741"></like-button> 
+          <a class="thumb" href="/suti%c3%a3-feminino-high-neck-tule-swarovski-preto/p/10032342741" title="Sutiã Feminino High Neck Tule Swarovski"> <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h1d/h7e/10144418168862/Suti-Feminino-High-Neck-Tule-Strass-Swarovski-null-10032342765-C1.jpg" alt="Image_Sutiã Feminino High Neck Tule Swarovski"> </a> 
+          <div class="addtocart"> 
+           <div class="actions-container-for-ProductGridComponent"> 
+            <div class="col-md-6"> 
+             <a href="/suti%c3%a3-feminino-high-neck-tule-swarovski-preto/p/10032342741" class="btn-default btn btn-inverse btn-square btn-sm btn-block"> Detalhes </a> 
+            </div> 
+            <div class="col-md-6 hidden-sm hidden-xs"> 
+             <a href="#marisa-quick-view-modal" class="marisa-quick-view btn btn-default btn-block btn-inverse btn-square btn-sm" data-url="/p/00069600/marisaQuickView" data-toggle="modal" data-target="#marisa-quick-view-modal" data-quick-view="/p/00069600/marisaQuickView"> Espiar</a> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="badges"> 
+           <div class="promotional-badge"> 
+            <span style="background-color: #FF3399; color: #FFFFFF">GANHE BRINDE</span> 
+           </div> 
+          </div> 
+          <div class="wishlist hidden"> 
+           <span class="ion-heart"></span> 
+          </div> 
+         </div> 
+         <div class="details"> 
+          <a class="name" href="/suti%c3%a3-feminino-high-neck-tule-swarovski-preto/p/10032342741" data-match-height="product-name"> Sutiã Feminino High Neck Tule Swarovski</a> 
+          <h3 class="headingTag">Sutiã Feminino High Neck Tule Swarovski</h3> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <a href="/suti%c3%a3-feminino-high-neck-tule-swarovski-preto/p/10032342741"> 
+             <div class="price" data-match-height="price-shipment-00069600"> 
+              <div class="actual-price"> 
+               <span>R$ 39,99</span> 
+              </div> 
+             </div> </a> 
+           </div> 
+           <div class="col-md-5"> 
+           </div> 
+          </div> 
+          <div class="row"> 
+           <div class="col-xs-12 pl0"> 
+            <div class="color-picker"> 
+             <ul> 
+             </ul> 
+            </div> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+       <div id="addToCartTitle" class="display-none"> 
+        <div class="add-to-cart-header"> 
+         <div class="headline"> 
+          <span class="headline-text">Added to Your Shopping Bag</span> 
+         </div> 
+        </div> 
+       </div> 
+       <div class="pagination-bar bottom"> 
+        <div class="pagination-bar-results hidden-sm hidden-xs ">
+          8 Produto(s)
+        </div> 
+        <div class="pagination-toolbar"> 
+         <div class="helper clearfix hidden-md hidden-lg"></div> 
+         <div class="sort-refine-bar "> 
+          <div class="form-group"> 
+           <form id="sortForm2" name="sortForm2" method="get" action="#"> 
+            <select id="sortOptions2" name="sort" class="btn btn-link btn-square" title="Ordenar por:"> <option disabled>Ordenar por:</option> <option value="newOnStore" selected> Lançamentos</option> <option value="price-asc"> Menor Preço</option> <option value="price-desc"> Maior Preço</option> <option value="topSold"> Mais vendidos</option> <option value="topDiscount"> Maior desconto</option> <option value="topRated"> Melhores avaliados</option> </select> 
+            <input type="hidden" name="q" value=":newOnStore"> 
+           </form> 
+          </div> 
+          <div class="pagination-wrap"> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div>
+     </div>
+    </div>
+    <div class=""> 
+     <p><style type="text/css">
+      .separador-chaodic-top{
+      line-height: 1.6em;
+      margin: 13px 0 -8px 0;
+      border-top: .1rem solid #ececec;
+      padding-top: 0px;
+      }
+</style></p> 
+     <div class="container_marisa banner-promo-ga"> 
+      <div class="row"> 
+       <div class="separador-chaodic-top text-center">
+        &nbsp;
+       </div> 
+      </div> 
+      <!-- ROW -->
+     </div> 
+     <!-- Container -->
+    </div>
+    <div class=""> 
+     <div chaordic="middle" class="hidden-sm hidden-xs"></div>
+    </div>
+    <div class="secondary-banners container hidden-xs"> 
+     <div class="row"> 
+      <div class="secondary-banner col-sm-4"> 
+      </div> 
+      <div class="secondary-banner col-sm-4"> 
+      </div> 
+      <div class="secondary-banner col-sm-4"> 
+      </div> 
+     </div> 
+    </div> 
+    <div class=""> 
+     <div chaordic="bottom"></div>
+    </div>
+    <div class=""> 
+     <style>
+.secondary-banners.container .row .primary-banner.col-sm-6.col-xs-12 {
+    position: absolute;
+    top: -999px;
+}
+</style> 
+    </div>
+    <div id="pickupTitle" class="display-none"> 
+     <div class="pickup-header"> 
+      <button class="btn btn-primary back__to__storelist js-back-to-storelist hidden-xs hidden-sm hidden-md hidden-lg"> Voltar</button> 
+      <span class="headline-inner">Product Availability by Store Location</span> 
+     </div> 
+    </div> 
+    <div id="popup_store_pickup_form" class="display-none"> 
+     <div id="pickupModal"> 
+      <div class="pickup-component js-pickup-component"> 
+       <div class="find-store-display js-find-store-display"> 
+        <div class="store-navigation"> 
+         <div class="pickup-search-product"> 
+          <div class="pickup-search-bar"> 
+           <form id="command" name="pickupInStoreForm" class="searchPOSForm clearfix" action="/dia-maes/promocao/c/diamaes-sutiacalcinha" method="post">
+            <div class="input-group"> 
+             <input type="text" class="form-control" name="locationQuery" data-id="locationForSearch" placeholder="Busque por Cidade ou CEP:"> 
+             <span class="input-group-btn"> <button class="btn btn-link" type="button" data-id="pickupstore_location_search_button"> <span class="glyphicon glyphicon-search"></span> </button> </span> 
+            </div> 
+            <input type="hidden" name="cartPage" data-id="atCartPage" value=""> 
+            <input type="hidden" name="entryNumber" value="" data-id="entryNumber"> 
+            <div> 
+             <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+            </div>
+           </form>
+          </div> 
+         </div> 
+         <ul class="pickup-store-list js-pickup-store-list"> 
+          <li class="loading"><span class="glyphicon glyphicon-repeat"></span></li> 
+          <li class="loading"><span class="glyphicon glyphicon-repeat"></span></li> 
+          <li class="loading"><span class="glyphicon glyphicon-repeat"></span></li> 
+          <li class="loading"><span class="glyphicon glyphicon-repeat"></span></li> 
+          <li class="loading"><span class="glyphicon glyphicon-repeat"></span></li> 
+         </ul> 
+         <div class="store-navigation-pager"> 
+          <a class="prev js-pickup-store-pager-prev" href="#"><span class="glyphicon glyphicon-chevron-left"></span> Previous</a> 
+          <a class="next js-pickup-store-pager-next" href="#">Next<span class="glyphicon glyphicon-chevron-right"></span></a> 
+          <div class="position">
+           <span class="js-pickup-store-pager-item-from"></span>-
+           <span class="js-pickup-store-pager-item-to"></span> from&nbsp;
+           <span class="js-pickup-store-pager-item-all"></span> &amp;nbspstores found
+          </div> 
+         </div> 
+        </div> 
+        <div class="display-details"> 
+         <div class="store-tabs js-pickup-tabs"> 
+          <div class="tabhead" aria-label="Store Details"> 
+           <span class="glyphicon glyphicon-info-sign"></span> 
+          </div> 
+          <div class="tabbody"> 
+           <div class="store-image"> 
+            <div class="js-store-image"></div> 
+            <div class="distance js-store-formattedDistance"></div> 
+           </div> 
+           <div class="store-info"> 
+            <div class="name js-store-displayName"></div> 
+            <div class="address"> 
+             <div class="js-store-line1"></div> 
+             <div class="js-store-line2"></div> 
+             <div class="js-store-town"></div> 
+            </div> 
+           </div> 
+          </div> 
+          <div class="tabhead js-pickup-map-tab" aria-label="Map"> 
+           <span class="glyphicon glyphicon-map-marker"></span> 
+          </div> 
+          <div class="tabbody"> 
+           <div class="pickup-map js-map-canvas"></div> 
+          </div> 
+          <div class="tabhead" aria-label="Hours"> 
+           <span class="glyphicon glyphicon-time"></span> 
+          </div> 
+          <div class="tabbody"> 
+           <div class="store-openings"> 
+            <div class="title">
+             Hours
+            </div> 
+            <dl class="dl-horizontal js-store-openings"></dl> 
+           </div> 
+          </div> 
+         </div> 
+         <div class="pickup-product"> 
+          <div class="variants js-pickup-product-variants"></div> 
+          <div class="thumb"></div> 
+          <div class="pickup-product-info"> 
+           <div class="name js-pickup-product-info"></div> 
+           <div class="price"> 
+            <div class="js-pickup-product-price"></div> 
+            <div class="stock js-store-stockPickup"></div> 
+           </div> 
+          </div> 
+          <div class="action"> 
+           <form id="command" data-class="add_to_cart_storepickup_form" data-id="add_to_cart_storepickup_form" action="/store-pickup/cart/add" method="post">
+            <input type="hidden" class="js-store-id"> 
+            <input type="hidden" class="js-store-productcode" name="productCodePost" value=""> 
+            <div class="qty-selector js-qty-selector"> 
+             <div class="input-group"> 
+              <span class="input-group-btn"> <button class="btn btn-primary js-qty-selector-minus" type="button"><span class="glyphicon glyphicon-minus" aria-hidden="true"></span></button> </span> 
+              <input type="text" class="form-control js-qty-selector-input" value="1" name="hiddenPickupQty"> 
+              <span class="input-group-btn"> <button class="btn btn-primary js-qty-selector-plus" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button> </span> 
+             </div> 
+            </div> 
+            <button class="btn btn-primary js-add-to-cart-for-pickup-popup" type="submit">Add to Bag</button> 
+            <div> 
+             <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+            </div>
+           </form>
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div class="container"> 
+     <div class="category-description"> 
+      <p class="title"> Kit Dia das Mães - Sutiã + Calcinha</p> 
+      <h2 class="headingTag"> Kit Dia das Mães - Sutiã + Calcinha</h2> 
+      <p class="description"> </p> 
+     </div> 
+    </div> 
+   </section> 
+   <footer id="footerToTop" class="footer"> 
+    <button id="gotToTop" class="gotToTop visible-xs visible-sm"> <i class="ion-chevron-up"></i> <p>Topo</p> </button> 
+    <section class="newsletter"> 
+     <div class="container"> 
+      <div class="newsletter-content"> 
+       <div class="col-sm-6 hidden-sm hidden-xs"> 
+        <button id="showModalErrorEmail" type="hidden" class="btn btn-primary hidden" data-toggle="modal" data-target="#modal--error-email-newsletter"> Launch demo modal </button> 
+        <form id="newsletterSubscriptionFormComponent" action="/newsletter/newsletter-register" method="POST">
+         <div class="row"> 
+          <p class="col-sm-12"> Receba ofertas com preços exclusivos</p> 
+          <h5 class="headingTag"> Receba ofertas com preços exclusivos</h5> 
+          <div class="form-group"> 
+           <div class="col-sm-5 form-content"> 
+            <input type="text" class="form-control" maxlength="255" size="1" id="nameEmailNL" name="name" placeholder="Nome:"> 
+           </div> 
+           <div class="col-sm-7 form-content"> 
+            <div class="input-group"> 
+             <input type="text" class="form-control" size="1" id="emailEmailNL" name="email" placeholder="E-mail:" maxlength="241"> 
+             <span class="input-group-btn"> <a id="sendMailNewsLetter" type="none" class="btn btn-primary"> OK</a> </span> 
+            </div> 
+           </div> 
+           <div class="clearfix"></div> 
+           <div class="col-md-12"> 
+            <span class="help-block"></span> 
+           </div> 
+          </div> 
+         </div> 
+         <div> 
+          <input type="hidden" name="CSRFToken" value="aaea2716-8813-4150-a1e4-7b1b01c53f13"> 
+         </div>
+        </form>
+       </div>
+       <div class="social-networking-newsletter col-md-6 col-sm-12 col-xs-12"> 
+        <div class="row hidden-sm hidden-xs"> 
+         <div class="text-right social-title">
+          Aproveite e compartilhe a Marisa nas Redes Sociais 
+          <h2 class="headingTag hidden">Aproveite e compartilhe a Marisa nas Redes Sociais</h2> 
+         </div> 
+        </div> 
+        <div class="row"> 
+         <div class="text-right social-icons">
+          <a href="https://www.facebook.com/voudemarisa" target="_blank"><img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/social-icons/ico_facebook.png" alt=""></a> 
+          <a href="http://twitter.com/voudemarisa" target="_blank"><img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/social-icons/ico_twitter.png" alt=""></a> 
+          <a href="http://www.youtube.com/voudemarisa" target="_blank"><img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/social-icons/ico_youtube.png" alt=""></a> 
+          <a href="http://instagram.com/voudemarisa" target="_blank"><img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/social-icons/ico_instagram.png" alt=""></a> 
+          <a href="http://voude.marisa.com.br" target="_blank"><img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/social-icons/ico_blog.png" alt=""></a>
+         </div> 
+        </div> 
+       </div>
+      </div> 
+     </div> 
+    </section> 
+    <section class="yCmsContentSlot pre-footer"> 
+     <div class="container"> 
+      <p class="testeFront FooterComponentModel (8796123595836@3)"></p> 
+      <div class="container-fluid"> 
+       <div class="footer__top"> 
+        <div class="row"> 
+         <div class="footer__right col-xs-12 col-md-offset-1 col-md-3"> 
+          <p class="search-title">Não encontrou o que estava procurando?</p> 
+          <p class="testeFront "></p> 
+          <div class="search-content"> 
+           <p> <a href="/faq"> <img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/ico_ajuda.png"> Podemos ajudar? Fale conosco. </a> </p> 
+           <p> <a href="/store-finder"> <img src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/ico_localizacao_cinza.png"> Encontre as lojas mais próximas. </a> </p> 
+          </div> 
+         </div> 
+         <div class="footer__left col-xs-12 col-sm-12 col-md-8"> 
+          <div class="row"> 
+           <div class="footer__nav--container col-xs-12 col-sm-12 col-md-3"> 
+            <div class="title hidden-sm hidden-xs">
+             Departamentos
+            </div> 
+            <a class="title visible-sm visible-xs collapsed" role="button" data-toggle="collapse" href="#collapseDepartamentosNavNode" aria-expanded="false" aria-controls="collapseDepartamentosNavNode">Departamentos</a> 
+            <ul class="footer__nav--links" id="collapseDepartamentosNavNode"> 
+             <li class="footer__link"> <a href="/c/feminino" title="Feminino"> Feminino</a> <h5 class="headingTag"> Feminino</h5> </li> 
+             <li class="footer__link"> <a href="/feminino/c/calcados" title="Calçados"> Calçados</a> <h5 class="headingTag"> Calçados</h5> </li> 
+             <li class="footer__link"> <a href="/feminino/c/lingerie" title="Lingerie"> Lingerie</a> <h5 class="headingTag"> Lingerie</h5> </li> 
+             <li class="footer__link"> <a href="/roupas/feminino/calcas/c/jeans-calcas" title="Jeans"> Jeans</a> <h5 class="headingTag"> Jeans</h5> </li> 
+             <li class="footer__link"> <a href="/feminino/c/plus-size" title="Plus Size"> Plus Size</a> <h5 class="headingTag"> Plus Size</h5> </li> 
+             <li class="footer__link"> <a href="/feminino/c/acessorios" title="Acessórios"> Acessórios</a> <h5 class="headingTag"> Acessórios</h5> </li> 
+             <li class="footer__link"> <a href="/c/infantil" title="Infantil"> Infantil</a> <h5 class="headingTag"> Infantil</h5> </li> 
+             <li class="footer__link"> <a href="/c/masculino" title="Masculino"> Masculino</a> <h5 class="headingTag"> Masculino</h5> </li> 
+             <li class="footer__link"> <a href="/c/marcas" title="Marcas"> Marcas</a> <h5 class="headingTag"> Marcas</h5> </li> 
+             <li class="footer__link"> <a href="/c/cartao-presente" title="Cartão Presente"> Cartão Presente</a> <h5 class="headingTag"> Cartão Presente</h5> </li> 
+            </ul> 
+           </div> 
+           <div class="footer__nav--container col-xs-12 col-sm-12 col-md-3"> 
+            <div class="title hidden-sm hidden-xs">
+             Institucional
+            </div> 
+            <a class="title visible-sm visible-xs collapsed" role="button" data-toggle="collapse" href="#collapseInstitucionalNavNode" aria-expanded="false" aria-controls="collapseInstitucionalNavNode">Institucional</a> 
+            <ul class="footer__nav--links" id="collapseInstitucionalNavNode"> 
+             <li class="footer__link"> <a href="/institucional/sobre" title="Sobre a Marisa"> Sobre a Marisa</a> <h5 class="headingTag"> Sobre a Marisa</h5> </li> 
+             <li class="footer__link"> <a href="/store-finder" title="Nossas Lojas"> Nossas Lojas</a> <h5 class="headingTag"> Nossas Lojas</h5> </li> 
+             <li class="footer__link"> <a href="http://ri.marisa.com.br/" title="Investidores"> Investidores</a> <h5 class="headingTag"> Investidores</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/termos-seguranca" title="Termos de Segurança"> Termos de Segurança</a> <h5 class="headingTag"> Termos de Segurança</h5> </li> 
+             <li class="footer__link"> <a href="http://imprensa.marisa.com.br/" title="Imprensa"> Imprensa</a> <h5 class="headingTag"> Imprensa</h5> </li> 
+             <li class="footer__link"> <a href="/cartoes-marisa" title="Cartão Marisa"> Cartão Marisa</a> <h5 class="headingTag"> Cartão Marisa</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/site-map" title="Mapa do Site"> Mapa do Site</a> <h5 class="headingTag"> Mapa do Site</h5> </li> 
+             <li class="footer__link"> <a href="http://www.saxfinanceira.com.br" title="Sax Financeira"> Sax Financeira</a> <h5 class="headingTag"> Sax Financeira</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/certificados" title="Certificados"> Certificados</a> <h5 class="headingTag"> Certificados</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/politica-privacidade" title="Política de Privacidade"> Política de Privacidade</a> <h5 class="headingTag"> Política de Privacidade</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/netpoints" title="Netpoints"> Netpoints</a> <h5 class="headingTag"> Netpoints</h5> </li> 
+            </ul> 
+           </div> 
+           <div class="footer__nav--container col-xs-12 col-sm-12 col-md-3"> 
+            <div class="title hidden-sm hidden-xs">
+             Ajuda e Suporte
+            </div> 
+            <a class="title visible-sm visible-xs collapsed" role="button" data-toggle="collapse" href="#collapseSuporteNavNode" aria-expanded="false" aria-controls="collapseSuporteNavNode">Ajuda e Suporte</a> 
+            <ul class="footer__nav--links" id="collapseSuporteNavNode"> 
+             <li class="footer__link"> <a href="/formas-de-pagamento" title="Formas de Pagamento"> Formas de Pagamento</a> <h5 class="headingTag"> Formas de Pagamento</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/change-and-dev" title="Trocas e Devoluções"> Trocas e Devoluções</a> <h5 class="headingTag"> Trocas e Devoluções</h5> </li> 
+             <li class="footer__link"> <a href="/my-account/orders" title="Meus Pedidos"> Meus Pedidos</a> <h5 class="headingTag"> Meus Pedidos</h5> </li> 
+             <li class="footer__link"> <a href="/como-comprar" title="Como Comprar"> Como Comprar</a> <h5 class="headingTag"> Como Comprar</h5> </li> 
+             <li class="footer__link"> <a href="/entrega" title="Prazo de Entrega"> Prazo de Entrega</a> <h5 class="headingTag"> Prazo de Entrega</h5> </li> 
+             <li class="footer__link"> <a href="/my-account/orders " title="2ª Via de Boleto"> 2ª Via de Boleto</a> <h5 class="headingTag"> 2ª Via de Boleto</h5> </li> 
+             <li class="footer__link"> <a href="/institucional/rules-promotions" title="Regras e Regulamentos"> Regras e Regulamentos</a> <h5 class="headingTag"> Regras e Regulamentos</h5> </li> 
+            </ul> 
+           </div> 
+           <div class="footer__nav--container col-xs-12 col-sm-12 col-md-3"> 
+            <div class="title hidden-sm hidden-xs">
+             Trabalhe Conosco
+            </div> 
+            <a class="title visible-sm visible-xs collapsed" role="button" data-toggle="collapse" href="#collapseTrabalheConoscoNavNode" aria-expanded="false" aria-controls="collapseTrabalheConoscoNavNode">Trabalhe Conosco</a> 
+            <ul class="footer__nav--links" id="collapseTrabalheConoscoNavNode"> 
+             <li class="footer__link"> <a href="https://www.vagas.com.br/marisa" title="Trabalhe Conosco"> Trabalhe Conosco</a> <h5 class="headingTag"> Trabalhe Conosco</h5> </li> 
+            </ul> 
+           </div> 
+           <div class="footer__nav--container col-xs-12 col-sm-12 col-md-3"> 
+            <div class="title hidden-sm hidden-xs">
+             Participe
+            </div> 
+            <a class="title visible-sm visible-xs collapsed" role="button" data-toggle="collapse" href="#collapseParticipeNavNode" aria-expanded="false" aria-controls="collapseParticipeNavNode">Participe</a> 
+            <ul class="footer__nav--links" id="collapseParticipeNavNode"> 
+             <li class="footer__link"> <a href="/institucional/netpoints" title="Programa Netpoints"> Programa Netpoints</a> <h5 class="headingTag"> Programa Netpoints</h5> </li> 
+            </ul> 
+           </div> 
+          </div> 
+         </div> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </section>
+    <section class="yCmsContentSlot bottom-footer"> 
+     <div class="security-badges-footer hidden-sm hidden-xs"> 
+      <div class="container"> 
+       <div class="row flex-valign-center"> 
+        <div class="col-sm-2 security-badges-title"> 
+         <div class="security-badges-image">
+          <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h46/hf2/9762966667294/ico-seguranca.png" alt="">
+         </div> 
+         <div class="security-badges-title-text">
+          Selos de segurança
+         </div> 
+        </div> 
+        <div class="col-sm-10"> 
+         <div class="col-sm-10">
+          <a href="http://www.ebit.com.br/marisa" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/h01/h96/9914672742430/ebit-diamante.png" alt=""> </a> 
+          <a href="https://www.fcontrol.com.br/" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/he7/h45/9762955362334/fcontrol-badge.png" alt=""></a> 
+          <a href="http://www.camara-e.net/" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/hc2/hbf/9762957426718/camerae-badge.png" alt=""> </a> 
+          <a href="https://www.verisign.com.br/" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/hac/h14/9762959982622/verisign-badge.png" alt=""> </a> 
+          <a href="https://www.reclameaqui.com.br/empresa/lojas-marisa-loja-online/" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/h87/h14/9762960572446/ra1000.png" alt=""></a> 
+          <a href="http://www.internetsegura.org/" target="_blank"><img src="https://images2.marisa.com.br/medias/sys_master/images/images/h48/h8e/9762960900126/internetsegura-badge.png" alt=""></a>
+         </div> 
+         <br> 
+        </div> 
+       </div> 
+      </div> 
+     </div>
+     <div class="payment-options-footer hidden-sm hidden-xs"> 
+      <div class="container"> 
+       <div class="row flex-valign-center"> 
+        <div class="col-sm-2 payment-options-title"> 
+         <div class="payment-options-image">
+          <img src="https://images2.marisa.com.br/medias/sys_master/images/images/hef/hd3/9762965454878/ico-cartaocredito-footer.png" alt="">
+         </div> 
+         <div class="payment-options-title-text">
+          Formas de pagamento
+         </div> 
+        </div> 
+        <div class="col-sm-10 payment-options-icons">
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h35/hc0/9762944811038/cartaomarisa-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/ha0/h58/9762945400862/cartaomarisa2-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h77/h00/9762946908190/amex-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/hfa/h04/9762947563550/hipercard-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h22/hcc/9762948612126/diners-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h6b/hce/9762949955614/mastercard-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h9b/h15/9762951233566/visa-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h3d/hb8/9762951659550/elo-icon.png" alt=""> 
+         <img src="https://images2.marisa.com.br/medias/sys_master/images/images/h15/h31/9762952151070/boleto-icon.png" alt="">
+        </div> 
+       </div> 
+      </div> 
+     </div>
+     <div class="institucional-footer hidden-sm hidden-xs"> 
+      <div class="container"> 
+       <div class="row flex-valign-center"> 
+        <div class="col-sm-8"> 
+         <div class="institucional-texto"> 
+          <p class="title">De mulher pra mulher, há mais de 60 anos</p> 
+          <h2 class="headingTag hidden">De mulher pra mulher, há mais de 60 anos</h2> 
+          <p>Com mais de 60 anos de experiência, conhecendo e acompanhando as necessidades do público-alvo da Companhia, a Marisa construiu uma relação de cumplicidade e intimidade com a mulher brasileira. A marca "Marisa", associada ao reconhecido slogan "De Mulher pra Mulher", possui forte reputação com o público feminino e uma identificação com os desejos e necessidades de seu público-alvo, que a Companhia acredita ser única no mercado brasileiro.</p> 
+         </div> 
+        </div> 
+        <div class="col-sm-4 text-right">
+         <img class="logo-marisa" src="https://images2.marisa.com.br/medias/sys_master/images/images/h16/hcc/9898321838110/logo-marisa.svg" alt="">
+        </div> 
+       </div> 
+       <img class="line-footer" src="https://images2.marisa.com.br/_ui/responsive/theme-marisa/img/line-footer.png" alt="">
+      </div> 
+     </div>
+     <div class="legal-footer"> 
+      <div class="container"> 
+       <p>As fotos aqui veiculadas, logotipo e marca são de propriedade do site <a href="http://www.marisa.com.br">www.marisa.com.br</a>. É vetada a sua reprodução, total ou parcial, sem a expressa autorização da administradora do site Marisa.</p> 
+       <p>Marisa Lojas S/A - CNPJ: 61.189.288/0001-89 - R. James Holland, 422 - Barra Funda, São Paulo - SP, 01138-050</p> 
+       <p><a href="/institucional/politica-privacidade">Política de Privacidade</a></p> 
+      </div> 
+     </div>
+    </section>
+   </footer> 
+  </main> 
+  <section id="modals"> 
+   <div id="modal--product-video" class="modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog modal-lg" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="embed-responsive embed-responsive-4by3"> 
+        <video id="product--video" class="embed-responsive-item video-js vjs-default-skin" src="" controls> 
+         <p class="vjs-no-js"> Seu navegador nÃ£o suporta a tecnologia de vÃ­deo deste site, por favor <a href="http://outdatedbrowser.com/pt" target="_blank">atualize para um navegador mais moderno</a> </p> 
+        </video> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="marisa-quick-view-modal" class="marisa-quick-view-modal modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog modal-lg" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+      </div> 
+      <div class="modal-body"> 
+       <div class="loading-component"> 
+        <h4 class="text-center text-brand-primary">Carregando..</h4> 
+        <p class="text-center"> <span class="loading-icon"></span> </p> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="modal--add-to-cart" class="modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog modal-lg" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-body"> 
+       <p>...</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <div id="modal--emailProduct" class="modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <div class="modal-title pull-left"> 
+        <h3 class="title f_title fc_brand_primary"> <strong> <span id="modal_email_title"> Recomende um produto Marisa</span> </strong> </h3> 
+       </div> 
+       <button id="close_modal_email" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+      </div> 
+      <div class="modal-body"> 
+       <div id="bodyModal_shareProduct" class="modal-message-confirmation"> 
+        <div class="loading-component"> 
+         <h4 class="text-center text-brand-primary">Carregando..</h4> 
+         <p class="text-center"> <span class="loading-icon"></span> </p> 
+        </div> 
+       </div> 
+       <div id="bodyModal_exception" class="hidden"> 
+        <p></p> 
+       </div> 
+      </div> 
+      <div id="shareProduct_blockBtn" class="row pb10 hidden"> 
+       <div class="col-md-4 col-md-offset-8 col-xs-12"> 
+        <a class="btn btn-default btn-block " data-dismiss="modal"> OK</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="modalGeral" class="modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <div id="modalGeraltitle" class="modal-title pull-left"></div> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+      </div> 
+      <div class="modal-body"> 
+       <div id="modalGeralmsg" class="modal-message-confirmation"> 
+       </div> 
+       <br> 
+       <div class="modal-show-address"></div> 
+       <div class="row "> 
+        <div class="col-xs-12"> 
+         <a class="btn btn-default btn-block modal-confirm-action-address" data-dismiss="modal"> Ok</a> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+   <div id="modal--error-email-newsletter" class="modal fade" tabindex="-1" role="dialog"> 
+    <div class="modal-dialog" role="document"> 
+     <div class="modal-content"> 
+      <div class="modal-header"> 
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button> 
+       <div class="modal-title pull-left"> 
+        <h3 class="title f_title"> Cadastro de Newsletter</h3> 
+       </div> 
+      </div> 
+      <div id="modalErrorEmailNewl" class="modal-body"> 
+      </div> 
+      <div class="row block-btn-uni"> 
+       <div class="col-xs-12"> 
+        <a class="btn btn-default btn-block btn-confim-sendNewLetter" data-dismiss="modal"> Ok</a> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div>
+  </section> 
+  <form name="accessiblityForm"> 
+   <input type="hidden" id="accesibility_refreshScreenReaderBufferField" name="accesibility_refreshScreenReaderBufferField" value=""> 
+  </form> 
+  <div id="ariaStatusMsg" class="skip" role="status" aria-relevant="text" aria-live="polite"></div> 
+  <script type="text/javascript">
+		/*<![CDATA[*/
+		
+		var ACC = { config: {} };
+			ACC.config.contextPath = "https://scripts2.marisa.com.br";
+			ACC.config.encodedContextPath = "";
+			ACC.config.commonResourcePath = "https://scripts2.marisa.com.br/_ui/responsive/common";
+			ACC.config.themeResourcePath = "https://scripts2.marisa.com.br/_ui/responsive/theme-marisa";
+			ACC.config.mediaResourcePath = "https://images2.marisa.com.br/_ui/responsive/theme-marisa";
+			ACC.config.siteResourcePath = "https://scripts2.marisa.com.br/_ui/responsive/site-marisa";
+			ACC.config.rootPath = "https://scripts2.marisa.com.br/_ui/responsive";	
+			ACC.config.CSRFToken = "aaea2716-8813-4150-a1e4-7b1b01c53f13";
+			ACC.pwdStrengthVeryWeak = 'Muito fraca';
+			ACC.pwdStrengthWeak = 'Fraca';
+			ACC.pwdStrengthMedium = 'Média';
+			ACC.pwdStrengthStrong = 'Forte';
+			ACC.pwdStrengthVeryStrong = 'Muito forte';
+			ACC.pwdStrengthUnsafePwd = 'password.strength.unsafepwd';
+			ACC.pwdStrengthTooShortPwd = 'Muito pequena';
+			ACC.pwdStrengthMinCharText = 'A senha deve ter no mí­nimo %d caracteres';
+			ACC.accessibilityLoading = 'Loading... Please wait...';
+			ACC.accessibilityStoresLoaded = 'Stores loaded';
+			ACC.config.googleApiKey="AIzaSyD_BDfU8056SjVYDCmA4ni5OV0cD_4670k";
+			ACC.config.googleApiVersion="3.7";
+
+			
+			ACC.autocompleteUrl = '/search/autocompleteSecure';
+
+			
+			ACC.config.loginUrl = '/login';
+
+			
+			ACC.config.authenticationStatusUrl = '/authentication/status';
+
+			
+		/*]]>*/
+	</script> 
+  <script type="text/javascript">
+	/*<![CDATA[*/
+	ACC.addons = {};	//JS holder for addons properties
+			
+	
+		ACC.addons.storefeedaddon = [];
+		
+		ACC.addons.paypaladdon = [];
+		
+		ACC.addons.liveeditaddon = [];
+		
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.add'] = 'Add new component to content slot';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.edit_menu'] = 'Edit menu';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.override'] = 'Override content slot';
+			
+				ACC.addons.liveeditaddon['liveeditaddon.message.slot.tooltip.action.create'] = 'Create new content slot';
+			
+		ACC.addons.assistedservicestorefront = [];
+		
+				ACC.addons.assistedservicestorefront['asm.timer.min'] = 'min';
+			
+	/*]]>*/
+</script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/shared/js/generatedVariables.js"></script>
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery-2.1.1.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/bootstrap/dist/js/bootstrap.min.js"></script> 
+  <script>
+    var getValue = {
+  "host": "www.marisa.com.br",
+  "page": {
+    "info": {"referrer": "https://www.marisa.com.br"},
+    "name": "category",
+    "timestamp": "2018-05-08T01:54:25Z",
+    "url": "https://www.marisa.com.br",
+    "categories": [
+      {
+        "id": "dia-maes",
+        "name": "Presentes Para Dia Das Mães"
+      },
+      {
+        "id": "promocao",
+        "name": "Promoção",
+        "parents": ["dia-maes"]
+      },
+      {
+        "id": "diamaes-sutiacalcinha",
+        "name": "Kit Dia das Mães - Sutiã + Calcinha",
+        "parents": ["promocao"]
+      }
+    ]
+  }
+};
+    
+    var uid = $('body').attr('data-page-uid');
+    
+    if ( uid == 'multiStepCheckoutSummaryPage' || uid == 'orderConfirmationPage' ){
+		getValue.info = {'referrer': window.location.href};
+   	    getValue.url = window.location.href;
+    }
+
+    if ( uid == 'productDetails' ){
+        // Tirando repetiÃ§Ã£o de colors
+        var colors = getValue.product.specs.color;
+        var uniqueColors = [];
+        $(colors).each(function(index, data){
+            var newElement = true;
+            $(uniqueColors).each(function(index, other){
+                if(other.id == data.id){
+                    newElement = false;
+                }     
+            });
+            if(newElement){
+                uniqueColors.push(data);
+            }
+        });
+        getValue.product.specs.color = uniqueColors;
+
+        // Tirando repetiÃ§Ã£o de Details colors
+        var colorsDetails = getValue.product.details.colorList;
+        var uniqueColorsDetails = [];
+        $(colorsDetails).each(function(index, data){
+            var newElement = true;
+            $(uniqueColorsDetails).each(function(index, other){
+                if(other.hexaColor == data.hexaColor){
+                    newElement = false;
+                }     
+            });
+            if(newElement){
+                uniqueColorsDetails.push(data);
+            }
+        });
+        getValue.product.details.colorList = uniqueColorsDetails;
+    };
+    
+    window.chaordic_meta = getValue;
+    
+    // Para a chaordic tag,
+    // foi solicitado para que fosse alterado os arrays com string.
+    // de [{id,value}];
+    // para ['value','value'];
+    // porem quem faz isso e a propria chaordic, colocamos esta outra variavel para mostrar. 
+        window.chaordic_meta_backup = getValue;
+    
+</script>
+  <script async defer src="//static.chaordicsystems.com/static/loader.js" data-apikey="marisa"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/enquire.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/Imager.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.blockUI-2.66.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.colorbox-min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.form.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.hoverIntent.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.pstrength.custom-1.2.0.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.syncheight.custom.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.tabs.custom.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery-ui-1.11.2.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.zoom.custom.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/owl.carousel.custom.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.tmpl-1.0.0pre.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.currencies.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.currencies.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/moment.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/moment_br.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/datatimepicker.min.js"></script> 
+  <!-- <script type="text/javascript" id="socialid_api_script" src="https://app.socialidnow.com/assets/api/socialid.js"></script> --> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.address.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.autocomplete.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.carousel.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.cart.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.cartitem.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.checkout.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.checkoutaddress.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.checkoutsteps.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.cms.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.colorbox.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.common.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.forgottenpassword.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.global.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.hopdebug.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.imagegallery.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.langcurrencyselector.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.minicart.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.navigation.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.order.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.paginationsort.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.payment.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.paymentDetails.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.pickupinstore.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.product.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.productDetail.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.quickview.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.ratingstars.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.refinements.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.silentorderpost.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.tabs.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.termsandconditions.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.track.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.storefinder.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.futurelink.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.productorderform.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.savedcarts.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.multidgrid.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.quickorder.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/jquery.mask.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/md5.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/acc.csv-import.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/_autoload.js"></script> 
+  <script src="https://scripts2.marisa.com.br/_ui/responsive/common/js/bluebird.min.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/cms/listorderformaction.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/cms/listpickupinstoreaction.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/common/js/cms/listaddtocartaction.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/addons/paypaladdon/responsive/common/js/paypaladdon.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/js/assistedservicestorefront.560a1ac6.js"></script> 
+  <script type="text/javascript" src="https://scripts2.marisa.com.br/_ui/addons/storefeedaddon/responsive/common/js/storefeedaddon.js"></script> 
+  <script src="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/js/old-custom.78aec2e0.js"></script> 
+  <script src="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/js/custom.0d8f537a.js"></script> 
+  <script src="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/js/pages/page--product.3e8d434c.js"></script> 
+  <script src="https://scripts2.marisa.com.br/_ui/responsive/theme-marisa/js/pages/tools.61bbbaa6.js"></script> 
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_BDfU8056SjVYDCmA4ni5OV0cD_4670k&amp;libraries=places&amp;callback=GoogleApi" async defer></script> 
+  <script>
+            Marisa.setDebug( true ).init();
+        </script> 
+  <div id="outdated"></div> 
+  <script>outdatedBrowser({lowerThan: 'transform', languagePath: '/outdatedbrowser'});</script> 
+  <script>
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+		sURLVariables = sPageURL.split('&'),
+		sParameterName,
+		i;
+
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
+			}
+		}
+	};
+
+	if(getUrlParameter('showBuildNumber')){
+		var buidNumber = 248;
+		var buildNumber = 'buildNumber: #' + buidNumber;
+		var el = document.querySelector('body'),
+		elChild = document.createElement('div');
+		elChild.innerHTML = buildNumber;
+		el.append(elChild, el.firstChild)
+	}
+</script> 
+  <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"errorBeacon":"bam.nr-data.net","licenseKey":"1ffad51641","agent":"","beacon":"bam.nr-data.net","applicationTime":122,"applicationID":"77545908","transactionName":"ZQBaZhFWXxBQWkJRXFxKa0IRXl8EclZYTEFdCVRXERgbSR5aGUNQUxFdVQxFSCBeXVMCHRgYGBokcmVK","queueTime":0}</script>  
+ </body>
+</html>
